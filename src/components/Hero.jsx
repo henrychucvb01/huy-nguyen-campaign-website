@@ -1,14 +1,10 @@
-import lbccCampus from '../assets/lbcc-campus.webp'
-import temporaryCandidateCutout from '../assets/temporary-candidate-cutout.png'
-
 export default function Hero() {
   return (
     <section className="hero" id="home">
       <img
-        className="hero__campus"
-        src={lbccCampus}
-        alt=""
-        aria-hidden="true"
+        className="hero__image"
+        src="/images/hero/huy-nguyen-lbcc-hero-temporary.png"
+        alt="Huy Henry Nguyen at Long Beach City College"
       />
       <div className="hero__content">
         <p className="eyebrow eyebrow--light">For Long Beach Community College</p>
@@ -26,12 +22,6 @@ export default function Hero() {
           <a className="button button--outline-light" href="#get-involved">Join the Campaign</a>
         </div>
       </div>
-      {/* Temporary cutout: replace this import with the official transparent PNG later. */}
-      <img
-        className="hero__candidate"
-        src={temporaryCandidateCutout}
-        alt="Huy Henry Nguyen"
-      />
     </section>
   )
 }

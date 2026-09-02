@@ -1,9 +1,10 @@
 export default function CampaignLogo() {
   return (
     <a className="campaign-logo" href="#home" aria-label="Huy Henry Nguyen campaign home">
-      <span className="campaign-logo__elect">Elect</span>
-      <span className="campaign-logo__name">Huy “Henry” Nguyen</span>
-      <span className="campaign-logo__office">LBCC Trustee</span>
+      <img
+        src="/images/logos/huy-henry-nguyen-campaign-logo.png"
+        alt="Elect Huy Henry Nguyen — LBCC Trustee"
+      />
     </a>
   )
 }
