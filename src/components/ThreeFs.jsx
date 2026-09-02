@@ -22,8 +22,10 @@ export default function ThreeFs() {
       <div className="section__inner">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">The Plan</p>
-            <h2>The 3 F’s: My Commitment to LBCC</h2>
+            <div className="framework-lockup" aria-label="F cubed: Faster, Foundation, Future">
+              <h2>F<sup>3</sup></h2>
+              <p>Faster <span>·</span> Foundation <span>·</span> Future</p>
+            </div>
           </div>
           <p className="section-heading__intro">
             A focused plan to help students move forward, meet their basic needs,

@@ -12,7 +12,7 @@ export default function WhyHuy() {
         </div>
         <div className="why-huy__copy">
           <p className="eyebrow">Why Huy</p>
-          <h2>Rooted in Long Beach. Committed to Public Service.</h2>
+          <h2>A Record of Service. A Commitment to Our Community.</h2>
           <p>
             Huy “Henry” Nguyen has built his life around service—to his country,
             public education, and the Long Beach community he calls home.
