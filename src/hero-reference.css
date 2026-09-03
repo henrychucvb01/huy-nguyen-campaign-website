@@ -223,13 +223,14 @@
   line-height: .7;
 }
 
+/* Show roughly the upper half of the full-body portrait. The hero itself crops the rest. */
 .hero__candidate {
   width: auto;
-  height: 140%;
+  height: 108%;
   max-width: none;
   position: absolute;
-  right: 1.1%;
-  bottom: -45%;
+  right: 1.5%;
+  bottom: -13%;
   z-index: 3;
   object-fit: contain;
   object-position: right bottom;
@@ -245,7 +246,7 @@
   .site-nav .button--red { min-height: 48px; font-size: 1rem; }
   .hero__content { width: 51vw; padding-top: 170px; padding-left: 3.3rem; }
   .hero h1 { font-size: clamp(4.35rem, 6.25vw, 5.5rem); }
-  .hero__candidate { height: 132%; right: -3%; bottom: -40%; }
+  .hero__candidate { height: 104%; right: -1%; bottom: -10%; }
   .hero__actions .button { min-width: 235px; min-height: 62px; }
 }
 
@@ -261,7 +262,7 @@
   .hero { min-height: 860px; height: 860px; }
   .hero__content { width: 58%; padding: 150px 0 45px 2.4rem; }
   .hero h1 { font-size: clamp(4.05rem, 7vw, 5rem); }
-  .hero__candidate { height: 118%; right: -7%; bottom: -30%; }
+  .hero__candidate { height: 98%; right: -4%; bottom: -7%; }
 }
 
 @media (max-width: 820px) {
@@ -281,7 +282,7 @@
   .hero .eyebrow { font-size: 1.15rem; }
   .hero h1 { font-size: clamp(4rem, 12.7vw, 5.35rem); }
   .headline-banner { font-size: .61em; }
-  .hero__candidate { height: 69%; right: -7%; bottom: -25%; }
+  .hero__candidate { height: 60%; right: -5%; bottom: -8%; }
   .hero__actions .button { min-width: 0; }
 }
 
@@ -304,5 +305,5 @@
   .hero__copy { font-size: 1.02rem; }
   .hero__actions { margin-top: 1.45rem; gap: .7rem; flex-direction: column; }
   .hero__actions .button { width: min(100%, 310px); min-height: 54px; }
-  .hero__candidate { height: 55%; right: -16%; bottom: -17%; }
+  .hero__candidate { height: 50%; right: -10%; bottom: -5%; }
 }
