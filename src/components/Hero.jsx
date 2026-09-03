@@ -1,3 +1,6 @@
+import candidateFull from '../assets/temporary-candidate-cutout.png'
+import '../hero-portrait-fix.css'
+
 export default function Hero() {
   return (
     <section className="hero" id="home">
@@ -39,8 +42,8 @@ export default function Hero() {
       </div>
 
       <img
-        className="hero__candidate"
-        src="/images/hero/huy-nguyen-candidate-cutout.png"
+        className="hero__candidate hero__candidate--full"
+        src={candidateFull}
         alt="Huy Henry Nguyen"
       />
     </section>
