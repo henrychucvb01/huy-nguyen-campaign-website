@@ -4,27 +4,19 @@ import '../about-page.css';
 const AboutPage = () => {
   return (
     <div className="about-page-wrapper">
-      {/* 1. HERO SECTION */}
-      <section className="about-hero-simple">
-        <div className="about-container">
-          <h1>Meet Huy Nguyen</h1>
-          <div className="red-divider"></div>
-        </div>
-      </section>
-
-      {/* 2. MAIN STORY SECTION */}
-      <section className="about-story-row">
+      
+      {/* SECTION 1: HERO & FAMILY */}
+      <section className="about-section">
         <div className="about-container grid-2">
           <div className="story-text">
-            <h2>Service Has Shaped Every Chapter of His Life.</h2>
+             <span className="about-kicker">Meet Huy</span>
+            <h1>Service Has Shaped Every Chapter of His Life.</h1>
             <p>
-              Huy “Henry” Nguyen grew up in a working-class Southern California family. 
-              His father was a postal worker, and his mother sewed clothes in a garment 
-              factory to provide for their family.
-            </p>
-            <p>
-              From them, Huy learned the values that have guided his life: 
-              <strong> hard work, perseverance, service to community, and lifelong learning.</strong>
+              Huy “Henry” Nguyen grew up in a working-class family in Southern California. 
+              His father was a postal worker, and his mother sewed clothes in a garment factory 
+              to provide for their family. From them, he learned the values of hard work, 
+              perseverance, and community — principles that have guided his life and his 
+              commitment to public service.
             </p>
           </div>
           <div className="story-image">
@@ -33,14 +25,45 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* 3. SECONDARY STORY SECTION (ZIG-ZAG) */}
-      <section className="about-story-row gray-bg">
+      {/* SECTION 2: LAUSD & LEADERSHIP (GRAY BACKGROUND) */}
+      <section className="about-section gray-bg">
         <div className="about-container grid-2 reverse">
           <div className="story-text">
-            <h2>A Record of Leadership</h2>
+            <h2>25 Years of Leadership</h2>
             <p>
-              [Add details about his military or professional experience here. 
-              This section is currently using a light gray background to break up the page.]
+              Nguyen’s career spans 25 years of government and community service — including 
+              more than 15 years with the Los Angeles Unified School District (LAUSD). 
+              He currently serves as a School District Administrator (Teamsters Local 572), 
+              overseeing 28 cafeterias, 113 staff members, and meal programs that feed 
+              thousands of students daily.
+            </p>
+            <p>
+              Managing multimillion-dollar budgets and complex operations has equipped him 
+              with the leadership and accountability skills needed to serve effectively on 
+              the Long Beach Community College District Board of Trustees.
+            </p>
+          </div>
+          <div className="story-image">
+            <img src="/images/about/community.jpg" alt="Community Leadership" />
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: MILITARY SERVICE */}
+      <section className="about-section">
+        <div className="about-container grid-2">
+          <div className="story-text">
+            <h2>A Veteran’s Commitment</h2>
+            <p>
+              Nguyen is a veteran U.S. Air Force Staff Sergeant, having proudly served 
+              two tours of duty in Turkey and Afghanistan. His military experience 
+              instilled in him a deep sense of discipline, leadership under pressure, 
+              and an enduring commitment to service.
+            </p>
+            <p>
+              He also serves in a statewide advocacy role with the California School 
+              Nutrition Association, ensuring that every worker is treated with dignity 
+              and respect.
             </p>
           </div>
           <div className="story-image">
@@ -48,6 +71,26 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+
+      {/* SECTION 4: EDUCATION & MISSION */}
+      <section className="about-section light-blue-bg">
+        <div className="about-container text-center-max">
+          <h2>Education & Vision</h2>
+          <p>
+            A lifelong learner, Nguyen holds a B.S. in Behavioral Science from Cal Poly Pomona, 
+            an M.S. in Management Information Systems from Bowie State University, and 
+            an MBA in Finance from CSULB.
+          </p>
+          <p className="closing-quote">
+            "Education is the bridge to opportunity. I am running to build a stronger 
+            Long Beach City College that empowers the next generation to succeed."
+          </p>
+          <div className="about-cta">
+             <a href="/#get-involved" className="cta-button">Join the Campaign</a>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };
