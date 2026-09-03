@@ -259,3 +259,43 @@ main {
 .endorsement-placeholder {
   display: none !important;
 }
+/* --- SURGICAL REPAIR BLOCK --- */
+
+/* 1. THE HORSE LOGO FIX */
+/* This targets only the endorsement images to stop the cropping */
+.endorsement-card img {
+  height: 110px !important;     /* Forces a height that fits the horse */
+  width: auto !important;       /* Keeps the proportions correct */
+  object-fit: contain !important; /* FORCES the whole logo to show */
+  padding: 10px !important;      /* Gives the horse some breathing room */
+  margin: 0 auto 15px !important;
+  display: block !important;
+}
+
+/* 2. THE HEADER OVERLAP FIX */
+/* This ensures the About Page starts below the logo */
+.about-page-wrapper {
+  padding-top: 160px !important; /* Pushes content down on the About Page only */
+  background: white;
+}
+
+/* 3. CLEANUP FIX */
+/* Hides the empty blue boxes so the site looks finished for launch */
+.endorsement-placeholder {
+  display: none !important;
+}
+
+/* 4. ENDORSEMENT GRID FIX */
+/* Makes the three logos center themselves and look professional */
+.endorsements__grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 20px !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+.endorsement-card {
+  border: 1px solid #e2e8f0 !important; /* Adds a clean subtle border */
+  border-radius: 8px !important;
+}
