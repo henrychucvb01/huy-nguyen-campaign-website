@@ -27,40 +27,42 @@
 
 .site-nav {
   gap: clamp(1.35rem, 2.6vw, 3rem);
-  position: relative;
-}
-
-.site-nav::after {
-  content: '★';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -15px;
-  height: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1;
-  background:
-    linear-gradient(90deg,
-      #e71932 0%,
-      #e71932 calc(50% - 20px),
-      transparent calc(50% - 20px),
-      transparent calc(50% + 20px),
-      #e71932 calc(50% + 20px),
-      #e71932 100%) center / 100% 1.5px no-repeat;
-  pointer-events: none;
 }
 
 .site-nav > a:not(.button) {
+  position: relative;
   color: #071a38;
   font-family: 'Barlow Condensed', Impact, sans-serif;
   font-size: clamp(.92rem, 1.18vw, 1.35rem);
   font-weight: 800;
   letter-spacing: .035em;
+}
+
+.site-nav > a:not(.button)::after {
+  content: '★';
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  width: calc(100% + 14px);
+  min-width: 64px;
+  height: 14px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  line-height: 1;
+  background:
+    linear-gradient(90deg,
+      #e71932 0%,
+      #e71932 calc(50% - 10px),
+      transparent calc(50% - 10px),
+      transparent calc(50% + 10px),
+      #e71932 calc(50% + 10px),
+      #e71932 100%) center / 100% 1.5px no-repeat;
+  pointer-events: none;
 }
 
 .site-nav .button--red {
@@ -282,7 +284,7 @@
   }
   .campaign-logo { background: transparent; box-shadow: none; padding: 0; }
   .site-nav { top: 82px; }
-  .site-nav::after { display: none; }
+  .site-nav > a:not(.button)::after { display: none; }
   .hero { min-height: 860px; height: 860px; }
   .hero__content { width: 58%; padding: 150px 0 45px 2.4rem; }
   .hero h1 { font-size: clamp(4.05rem, 7vw, 5rem); }
