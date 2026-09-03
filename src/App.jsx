@@ -1,4 +1,5 @@
 import './App.css'
+import './hero-reference.css'
 import Endorsements from './components/Endorsements'
 import ExperienceStrip from './components/ExperienceStrip'
 import Footer from './components/Footer'
