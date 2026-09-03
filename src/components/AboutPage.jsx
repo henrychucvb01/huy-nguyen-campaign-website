@@ -3,19 +3,20 @@ import '../about-page.css';
 
 const AboutPage = () => {
   return (
-    <div className="about-wrapper">
-      {/* Hero Section - Simple and Clean */}
-      <header className="about-header">
-        <h1>About Huy Nguyen</h1>
-        <div className="accent-line"></div>
-      </header>
+    <div className="about-page-wrapper">
+      {/* 1. HERO SECTION */}
+      <section className="about-hero-simple">
+        <div className="about-container">
+          <h1>Meet Huy Nguyen</h1>
+          <div className="red-divider"></div>
+        </div>
+      </section>
 
-      <div className="about-container">
-        
-        {/* Section 1: Introduction */}
-        <section className="about-row">
-          <div className="about-text">
-            <h2 className="section-title">Service Has Shaped Every Chapter of His Life.</h2>
+      {/* 2. MAIN STORY SECTION */}
+      <section className="about-story-row">
+        <div className="about-container grid-2">
+          <div className="story-text">
+            <h2>Service Has Shaped Every Chapter of His Life.</h2>
             <p>
               Huy “Henry” Nguyen grew up in a working-class Southern California family. 
               His father was a postal worker, and his mother sewed clothes in a garment 
@@ -26,40 +27,27 @@ const AboutPage = () => {
               <strong> hard work, perseverance, service to community, and lifelong learning.</strong>
             </p>
           </div>
-          <div className="about-image-container">
-            <img src="/images/hero/huy-nguyen-full.webp" alt="Huy Nguyen" className="about-img-main" />
+          <div className="story-image">
+            <img src="/images/hero/huy-nguyen-full.webp" alt="Huy Nguyen" />
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Section 2: Family/Roots */}
-        <section className="about-row reverse">
-          <div className="about-text">
-            <h2 className="section-title">Rooted in Family</h2>
+      {/* 3. SECONDARY STORY SECTION (ZIG-ZAG) */}
+      <section className="about-story-row gray-bg">
+        <div className="about-container grid-2 reverse">
+          <div className="story-text">
+            <h2>A Record of Leadership</h2>
             <p>
-              [Insert your family story here. Talk about the library-family photo or 
-              growing up in the local community.]
+              [Add details about his military or professional experience here. 
+              This section is currently using a light gray background to break up the page.]
             </p>
           </div>
-          <div className="about-image-container">
-            <img src="/images/about/family.jpg" alt="Family" className="about-img-sub" />
+          <div className="story-image">
+            <img src="/images/about/military.jpg" alt="Military Service" />
           </div>
-        </section>
-
-        {/* Section 3: Military Service */}
-        <section className="about-row">
-          <div className="about-text">
-            <h2 className="section-title">A Record of Service</h2>
-            <p>
-              [Insert military service or professional background here. 
-              Keep it focused on leadership and results.]
-            </p>
-          </div>
-          <div className="about-image-container">
-            <img src="/images/about/military.jpg" alt="Military Service" className="about-img-sub" />
-          </div>
-        </section>
-
-      </div>
+        </div>
+      </section>
     </div>
   );
 };
