@@ -1,54 +1,27 @@
-/* Push content down so it doesn't hide behind the fixed header */
 .about-page-wrapper {
-  padding-top: 140px; /* Adjust this if the header is still covering text */
-  background-color: #ffffff;
+  padding-top: 140px; /* Adjust this to match your header height */
+  background-color: #fff;
   color: #071a38;
-  font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 .about-container {
-  max-width: 1100px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
-/* Hero Title */
-.about-hero-simple {
-  text-align: center;
-  padding: 40px 0;
-}
-
-.about-hero-simple h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.red-divider {
-  width: 80px;
-  height: 5px;
-  background-color: #ef233c;
-  margin: 0 auto;
-}
-
-/* Grid Layout for Story */
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.about-story-row {
+.about-section {
   padding: 80px 0;
 }
 
-.gray-bg {
-  background-color: #f8f9fa;
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
 }
 
-/* The Zig-Zag effect */
 .reverse {
   direction: rtl;
 }
@@ -56,46 +29,82 @@
   direction: ltr;
 }
 
-/* Text and Image sizing */
-.story-text h2 {
-  font-size: 2.2rem;
-  line-height: 1.1;
-  margin-bottom: 20px;
+/* Typography */
+.about-kicker {
+  color: #ef233c;
+  font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.story-text h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.story-text h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .story-text p {
   font-size: 1.15rem;
   line-height: 1.7;
   margin-bottom: 20px;
-  color: #333;
+  color: #334155;
 }
 
+/* Background colors to break up sections */
+.gray-bg { background-color: #f8fafc; }
+.light-blue-bg { background-color: #f1f5f9; text-align: center; }
+
+/* Image styling */
 .story-image img {
   width: 100%;
-  max-width: 500px;
-  height: auto;
+  max-height: 500px;
+  object-fit: cover;
   border-radius: 4px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-/* Mobile Fixes */
-@media (max-width: 850px) {
-  .about-page-wrapper {
-    padding-top: 100px;
-  }
-  
-  .grid-2 {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
-  
-  .reverse {
-    direction: ltr;
-  }
+/* Closing Section */
+.text-center-max {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-  .story-image img {
-    max-width: 100%;
-  }
+.closing-quote {
+  font-style: italic;
+  font-size: 1.5rem !important;
+  color: #071a38;
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #ef233c;
+  color: white;
+  padding: 15px 40px;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-page-wrapper { padding-top: 100px; }
+  .grid-2 { grid-template-columns: 1fr; gap: 40px; }
+  .reverse { direction: ltr; }
+  .story-text h1 { font-size: 2.8rem; }
+  .about-section { padding: 50px 0; }
 }
