@@ -2,13 +2,13 @@ import { useState } from 'react'
 import CampaignLogo from './CampaignLogo'
 
 const links = [
-  ['About Huy', '#about'],
-  ['3 F’s', '#three-fs'],
-  ['Experience', '#experience'],
-  ['Endorsements', '#endorsements'],
-  ['Get Involved', '#get-involved'],
-  ['News', '#news'],
-  ['Contact', '#contact'],
+  ['About Huy', '/about'],
+  ['3 F’s', '/#three-fs'],
+  ['Experience', '/#experience'],
+  ['Endorsements', '/#endorsements'],
+  ['Get Involved', '/#get-involved'],
+  ['News', '/#news'],
+  ['Contact', '/#contact'],
 ]
 
 export default function Header() {
