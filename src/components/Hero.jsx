@@ -42,7 +42,7 @@ export default function Hero() {
 
       <img
         className="hero__candidate hero__candidate--full"
-        src="/images/hero/huy-nguyen-full.webp"
+        src="/images/hero/huy-nguyen-full.png"
         alt="Huy Henry Nguyen"
       />
     </section>
