@@ -1,11 +1,11 @@
-/* Portrait-only correction: keep the full-body cutout, but frame it like the reference. */
+/* Portrait-only correction: match the requested chest/upper-torso crop. */
 .hero__candidate.hero__candidate--full {
   width: auto;
   height: 125%;
   max-width: none;
   position: absolute;
   right: 8%;
-  bottom: -31%;
+  bottom: -43%;
   z-index: 3;
   object-fit: contain;
   object-position: right bottom;
@@ -17,7 +17,7 @@
   .hero__candidate.hero__candidate--full {
     height: 120%;
     right: 5%;
-    bottom: -28%;
+    bottom: -39%;
   }
 }
 
@@ -25,7 +25,7 @@
   .hero__candidate.hero__candidate--full {
     height: 113%;
     right: 1%;
-    bottom: -24%;
+    bottom: -34%;
   }
 }
 
@@ -33,7 +33,7 @@
   .hero__candidate.hero__candidate--full {
     height: 89%;
     right: -6%;
-    bottom: -18%;
+    bottom: -25%;
   }
 }
 
@@ -41,6 +41,6 @@
   .hero__candidate.hero__candidate--full {
     height: 74%;
     right: -12%;
-    bottom: -14%;
+    bottom: -20%;
   }
 }
