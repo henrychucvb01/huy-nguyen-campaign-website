@@ -10,9 +10,10 @@ function CivicIcon() {
 
 function AirForceIcon() {
   return (
-    <svg viewBox="0 0 72 64" aria-hidden="true">
-      <path d="M5 14 29 28l7 8 7-8 24-14-9 17-16 9-6 8-6-8-16-9L5 14Zm31 29 5 6-5 7-5-7 5-6Z" fill="currentColor" />
-      <path d="m15 31 15 7 6 7 6-7 15-7-6 10-11 5-4 5-4-5-11-5-6-10Z" fill="currentColor" opacity=".95" />
+    <svg viewBox="0 0 80 64" aria-hidden="true">
+      <path d="M4 13 31 28l9 9 9-9 27-15-9 18-17 10-10 12-10-12-17-10L4 13Z" fill="currentColor" />
+      <path d="m17 32 14 7 9 10 9-10 14-7-6 11-12 7-5 8-5-8-12-7-6-11Z" fill="currentColor" />
+      <circle cx="40" cy="47" r="3.5" fill="#f1263a" />
     </svg>
   )
 }
@@ -46,11 +47,11 @@ export default function ExperienceStrip() {
       <div className="experience-strip__inner">
         {stats.map(({ number, label, Icon }) => (
           <div className="experience-stat experience-stat--icon" key={label}>
-            <div className="experience-stat__icon"><Icon /></div>
             <div className="experience-stat__text">
               <strong>{number}</strong>
               <span>{label}</span>
             </div>
+            <div className="experience-stat__icon"><Icon /></div>
           </div>
         ))}
       </div>
