@@ -33,7 +33,13 @@ export default function Header() {
         {links.map(([label, href]) => (
           <a key={label} href={href} onClick={closeMenu}>{label}</a>
         ))}
-        <a className="button button--red button--small" href="#get-involved" onClick={closeMenu}>
+        <a
+          className="button button--red button--small"
+          href="https://www.efundraisingconnections.com/c/HUYNGUYENFORLBCCDTRUSTEEBOARD"
+          target="_blank"
+          rel="noreferrer"
+          onClick={closeMenu}
+        >
           Donate
         </a>
       </nav>

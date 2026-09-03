@@ -14,6 +14,11 @@ export default function Hero() {
           <span className="headline-banner"><span>A Stronger Future</span></span>
           <span className="headline-closing">For LBCC.</span>
         </h1>
+        <div className="hero__divider" aria-hidden="true">
+          <span />
+          <b>★</b>
+          <span />
+        </div>
         <p className="hero__copy">
           Committed to the Community. Focused on Our Future.
         </p>

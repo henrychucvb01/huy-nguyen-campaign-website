@@ -4,18 +4,22 @@ const actions = [
     title: 'Volunteer',
     text: 'Join neighbors across Long Beach working to move LBCC forward.',
     link: 'Sign Up to Help',
+    href: '#contact',
   },
   {
     number: '02',
     title: 'Endorse',
     text: 'Add your name and voice to the growing community supporting Huy.',
     link: 'Endorse Huy',
+    href: '#contact',
   },
   {
     number: '03',
     title: 'Donate',
     text: 'Help us reach voters and build a campaign powered by the community.',
     link: 'Contribute',
+    href: 'https://www.efundraisingconnections.com/c/HUYNGUYENFORLBCCDTRUSTEEBOARD',
+    external: true,
     featured: true,
   },
 ]
@@ -34,7 +38,13 @@ export default function GetInvolved() {
               <span className="involvement-card__icon" aria-hidden="true">{action.number}</span>
               <h3>{action.title}</h3>
               <p>{action.text}</p>
-              <a href="#contact">{action.link} →</a>
+              <a
+                href={action.href}
+                target={action.external ? '_blank' : undefined}
+                rel={action.external ? 'noreferrer' : undefined}
+              >
+                {action.link} →
+              </a>
             </article>
           ))}
         </div>
