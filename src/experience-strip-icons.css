@@ -3,14 +3,14 @@
   padding-top: .45rem;
   padding-bottom: .45rem;
   display: grid;
-  grid-template-columns: 64px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 70px;
   align-items: center;
   column-gap: 1rem;
 }
 
 .experience-stat__icon {
-  width: 58px;
-  height: 58px;
+  width: 66px;
+  height: 66px;
   display: grid;
   place-items: center;
   color: #fff;
@@ -30,34 +30,34 @@
 }
 
 .experience-stat.experience-stat--icon strong {
-  font-size: clamp(3.5rem, 4.7vw, 5.3rem);
+  font-size: clamp(3.35rem, 4.45vw, 5rem);
   line-height: .82;
 }
 
 .experience-stat.experience-stat--icon span {
-  margin-top: .7rem;
-  font-size: clamp(.8rem, .9vw, 1rem);
+  margin-top: .62rem;
+  font-size: clamp(.78rem, .86vw, .94rem);
   line-height: 1.22;
 }
 
 @media (max-width: 1280px) {
   .experience-stat.experience-stat--icon {
-    grid-template-columns: 52px minmax(0, 1fr);
-    column-gap: .75rem;
+    grid-template-columns: minmax(0, 1fr) 60px;
+    column-gap: .8rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
 
   .experience-stat__icon {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
   }
 }
 
 @media (max-width: 820px) {
   .experience-stat.experience-stat--icon {
-    grid-template-columns: 58px minmax(0, 1fr);
-    column-gap: 1rem;
+    grid-template-columns: minmax(0, 1fr) 58px;
+    column-gap: .8rem;
   }
 
   .experience-stat__icon {
