@@ -9,7 +9,7 @@ export default function Hero() {
       />
 
       <div className="hero__content">
-        <p className="eyebrow eyebrow--light">For Long Beach Community College</p>
+        <p className="eyebrow eyebrow--light">For LBCC Trustee • Area 5</p>
         <h1>
           <span>Experience.</span>
           <span>Service.</span>
@@ -24,8 +24,8 @@ export default function Hero() {
         </div>
 
         <p className="hero__copy">
-          A proven leader with deep roots in Long Beach,<br />
-          fighting for our students, veterans, and community.
+          Committed to our students, veterans, and community.<br />
+          Focused on a stronger future for LBCC.
         </p>
 
         <div className="hero__actions">
