@@ -1,4 +1,3 @@
-import candidateFull from '../assets/temporary-candidate-cutout.png'
 import '../hero-portrait-fix.css'
 
 export default function Hero() {
@@ -43,7 +42,7 @@ export default function Hero() {
 
       <img
         className="hero__candidate hero__candidate--full"
-        src={candidateFull}
+        src="/images/hero/huy-nguyen-full.webp"
         alt="Huy Henry Nguyen"
       />
     </section>
