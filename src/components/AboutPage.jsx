@@ -15,7 +15,7 @@ export default function AboutPage() {
           <p className="about-kicker">Meet Huy</p>
           <h1>Service has shaped every chapter of his life.</h1>
           <p>Huy “Henry” Nguyen grew up in a working-class Southern California family. His father was a postal worker, and his mother sewed clothes in a garment factory to provide for their family.</p>
-          <p>From them, Huy learned the values that have guided his life: <strong>work hard, persevere, serve your community, and never stop learning.</strong></p>
+          <p>From them, Huy learned the values that have guided his life: <strong>hard work, perseverance, service to community, and lifelong learning.</strong></p>
         </div>
         <figure className="about-photo about-photo--hero"><img src={photos.community} alt="Huy Nguyen speaking with members of the community" /></figure>
       </section>
@@ -33,7 +33,7 @@ export default function AboutPage() {
           <p className="about-kicker">Service to Country</p>
           <h2>A lifetime of service.</h2>
           <p>Huy spent 10 years in the United States Air Force, rising to the rank of Staff Sergeant and serving overseas, including in Turkey and Afghanistan.</p>
-          <p>His military service taught him discipline, accountability, teamwork, and how to lead under pressure—lessons that continue to guide his approach to public service.</p>
+          <p>His military service taught him discipline, accountability, teamwork, leadership under pressure, and a lasting commitment to service—lessons that continue to guide his approach to public life.</p>
         </div>
       </section>
 
@@ -43,7 +43,7 @@ export default function AboutPage() {
           <p className="about-kicker">Service to Students</p>
           <h2>16 years in public education.</h2>
           <p>After serving his country, Huy continued his public service in education. Today, as a school district administrator, he oversees operations across 28 school sites, 113 employees, and programs serving thousands of student meals.</p>
-          <p>His work has given him firsthand experience managing people, multimillion-dollar operations, and the everyday challenges facing students, families, and frontline education employees.</p>
+          <p>His work has given him firsthand experience in management, accountability, and complex operations, along with an understanding of the everyday challenges facing students, families, and frontline education employees.</p>
         </div>
       </section>
 
