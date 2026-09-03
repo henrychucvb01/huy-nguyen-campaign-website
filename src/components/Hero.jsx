@@ -2,9 +2,10 @@ export default function Hero() {
   return (
     <section className="hero" id="home">
       <img
-        className="hero__image"
-        src="/images/hero/huy-nguyen-lbcc-hero-temporary.png"
-        alt="Huy Henry Nguyen at Long Beach City College"
+        className="hero__campus"
+        src="/images/hero/long-beach-city-college.webp"
+        alt=""
+        aria-hidden="true"
       />
       <div className="hero__content">
         <p className="eyebrow eyebrow--light">For Long Beach Community College</p>
@@ -27,6 +28,11 @@ export default function Hero() {
           <a className="button button--outline-light" href="#get-involved">Join the Campaign</a>
         </div>
       </div>
+      <img
+        className="hero__candidate"
+        src="/images/hero/huy-nguyen-candidate-cutout.png"
+        alt="Huy Henry Nguyen"
+      />
     </section>
   )
 }
