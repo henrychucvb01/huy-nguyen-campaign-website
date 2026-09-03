@@ -200,3 +200,62 @@ main {
 .about-page-wrapper {
   margin-top: 50px !important; 
 }
+/* --- FINAL ENDORSEMENTS FIX --- */
+.endorsements {
+  background: #071a38 !important; /* Ensures the section background is Navy */
+}
+
+.endorsements__grid {
+  border: none !important; /* Cleans up the weird borders in the screenshot */
+  gap: 20px !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+}
+
+.endorsement-card {
+  background: white !important;
+  border-radius: 4px !important;
+  padding: 40px 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 280px !important;
+  border: none !important;
+}
+
+.endorsement-card img {
+  /* THE HORSE FIX: This ensures the logo stays inside the box */
+  width: auto !important;
+  max-width: 90% !important;
+  height: auto !important;
+  max-height: 100px !important; /* Keeps the horse from being too tall */
+  object-fit: contain !important; /* Shows the WHOLE logo */
+  margin-bottom: 20px !important;
+  display: block !important;
+}
+
+.endorsement-card h3 {
+  color: #071a38 !important;
+  font-size: 0.85rem !important;
+  font-family: sans-serif !important;
+  letter-spacing: 1px !important;
+  margin: 0 !important;
+}
+
+/* --- SITE SPACING FIX --- */
+/* This ensures the content doesn't hide behind the header on the HOME PAGE */
+main {
+  margin-top: 0 !important; /* The Hero section handles its own spacing */
+}
+
+/* This ensures the content doesn't hide behind the header on the ABOUT PAGE */
+.about-page-wrapper {
+  padding-top: 140px !important; 
+}
+
+/* --- CLEAN LAUNCH FIX --- */
+/* Hides those empty "Additional Endorsement" boxes so the site looks finished */
+.endorsement-placeholder {
+  display: none !important;
+}
