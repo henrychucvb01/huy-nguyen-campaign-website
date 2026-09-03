@@ -31,7 +31,7 @@ export default function Hero() {
         </p>
 
         <div className="hero__actions">
-          <a className="button button--red" href="#about">
+          <a className="button button--red" href="/about">
             <span>Meet Huy</span><span className="button__arrow" aria-hidden="true">→</span>
           </a>
           <a className="button button--outline-light" href="#get-involved">
