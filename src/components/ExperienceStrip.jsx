@@ -8,14 +8,6 @@ function CivicIcon() {
   )
 }
 
-function AirForceIcon() {
-  return (
-    <svg viewBox="0 0 100 100" aria-hidden="true">
-      <path fill="currentColor" fillRule="evenodd" d="M49.80 74.20 L42.60 79.40 L43.20 80.00 L44.00 80.40 L45.40 81.60 L46.20 82.00 L47.60 83.20 L50.00 84.80 L50.60 84.20 L51.40 83.80 L52.00 83.20 L54.40 81.60 L55.80 80.40 L56.60 80.00 L57.20 79.40 L55.40 78.00 L54.60 77.60 L54.00 77.00 L53.20 76.60 L51.80 75.40 L51.00 75.00 L50.40 74.40 Z M39.40 66.20 L32.00 72.00 L40.60 78.20 L43.60 71.60 Z M60.60 66.20 L56.40 71.60 L59.40 78.20 L68.00 72.00 Z M50.00 62.60 C45.00 62.60 41.00 66.60 41.00 71.60 C41.00 76.60 45.00 80.60 50.00 80.60 C55.00 80.60 59.00 76.60 59.00 71.60 C59.00 66.60 55.00 62.60 50.00 62.60 Z M17.00 43.20 L24.80 57.20 L40.80 64.40 L45.80 59.80 L24.40 45.20 Z M83.00 43.20 L75.20 57.20 L59.20 64.40 L54.20 59.80 L75.60 45.20 Z M10.40 26.20 L17.20 41.40 L45.60 59.20 L49.00 53.60 L25.00 34.20 Z M89.60 26.20 L82.80 41.40 L54.40 59.20 L51.00 53.60 L75.00 34.20 Z M12.00 15.20 L18.80 34.00 L49.00 53.00 L50.00 51.40 L31.00 31.40 Z M88.00 15.20 L81.20 34.00 L51.00 53.00 L50.00 51.40 L69.00 31.40 Z" />
-    </svg>
-  )
-}
-
 function DegreeIcon() {
   return (
     <svg viewBox="0 0 64 64" aria-hidden="true">
@@ -39,7 +31,7 @@ function SchoolIcon() {
 
 const stats = [
   { number: '26', label: 'Years Public Service', Icon: CivicIcon },
-  { number: '10', label: 'Years U.S. Air Force', Icon: AirForceIcon },
+  { number: '10', label: 'Years U.S. Air Force', image: '/images/icons/air-force-white.png' },
   { number: '3', label: 'Degrees', Icon: DegreeIcon },
   { number: '16', label: 'Years Public Education', Icon: SchoolIcon },
 ]
@@ -48,15 +40,22 @@ export default function ExperienceStrip() {
   return (
     <section className="experience-strip" id="experience" aria-label="Experience">
       <div className="experience-strip__inner">
-        {stats.map(({ number, label, Icon }) => (
-          <div className="experience-stat experience-stat--icon" key={label}>
-            <div className="experience-stat__text">
-              <strong>{number}</strong>
-              <span>{label}</span>
-            </div>
-            <div className="experience-stat__icon"><Icon /></div>
-          </div>
-        ))}
+        {stats.map(({ number, label, Icon, image }) => (
+  <div className="experience-stat experience-stat--icon" key={label}>
+    <div className="experience-stat__text">
+      <strong>{number}</strong>
+      <span>{label}</span>
+    </div>
+
+    <div className="experience-stat__icon">
+      {image ? (
+        <img src={image} alt="" aria-hidden="true" />
+      ) : (
+        <Icon />
+      )}
+    </div>
+  </div>
+))}
       </div>
     </section>
   )
