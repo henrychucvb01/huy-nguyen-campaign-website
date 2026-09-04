@@ -32,19 +32,46 @@ export default function Endorsements() {
         </div>
 
         <div className="endorsements__grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
-          {endorsements.map((endorsement) => (
-            <article className="endorsement-card" key={endorsement.name} style={{ background: '#fff', padding: '30px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '250px' }}>
-              <div className="logo-wrapper" style={{ width: '100%', height: '120px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
-                <img 
-                  src={endorsement.image} 
-                  alt={`${endorsement.name} endorsement`} 
-                  style={{ 
-                    maxWidth: '100%', 
-                    maxHeight: '100%', 
-                    objectFit: 'contain' // THIS FIXES THE HORSE
-                  }} 
-                />
-              </div>
+     {endorsements.map((endorsement) => (
+  <article
+    className="endorsement-card"
+    key={endorsement.name}
+    style={{
+      background: '#fff',
+      padding: '30px',
+      textAlign: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '250px'
+    }}
+  >
+    <div
+      className="logo-wrapper"
+      style={{
+        width: '100%',
+        height: '140px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: '20px',
+        overflow: 'visible'
+      }}
+    >
+      <img
+        src={endorsement.image}
+        alt={`${endorsement.name} endorsement`}
+        style={{
+          maxWidth: '100%',
+          maxHeight: '140px',
+          width: 'auto',
+          height: 'auto',
+          objectFit: 'contain',
+          display: 'block'
+        }}
+      />
+    </div>
               <h3 style={{ color: '#071a38', fontSize: '1rem', fontWeight: '800', textTransform: 'uppercase', margin: 0 }}>{endorsement.name}</h3>
             </article>
           ))}
