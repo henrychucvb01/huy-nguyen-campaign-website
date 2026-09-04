@@ -166,73 +166,54 @@ h1, h2, h3 { margin-top: 0; font-family: 'Barlow Condensed', Impact, sans-serif;
   .site-footer__top { grid-template-columns: 1fr; }
   .footer-links { grid-column: auto; }
 }
-/* THE LOGO FIX */
-.endorsement-card {
-  background: white !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 20px !important;
-  height: 280px !important; /* Forces the box to be tall enough */
-}
+/* --- ENDORSEMENTS CLEAN FIX --- */
 
-.endorsement-card img {
-  max-width: 90% !important;
-  max-height: 150px !important; /* Limits height so the horse stays inside */
-  width: auto !important;
-  height: auto !important;
-  object-fit: contain !important; /* FORCES the whole logo to show */
-  margin-bottom: 15px !important;
-  display: block !important;
-}
-
-.endorsement-card h3 {
-  color: #071a38 !important;
-  font-size: 0.9rem !important;
-  margin: 0 !important;
-}
-main {
-  margin-top: 180px !important; /* Pushes the whole site down below the logo */
-}
-
-/* If you are on the About Page */
-.about-page-wrapper {
-  margin-top: 50px !important; 
-}
-/* --- FINAL ENDORSEMENTS FIX --- */
 .endorsements {
-  background: #071a38 !important; /* Ensures the section background is Navy */
+  background: #071a38 !important;
 }
 
 .endorsements__grid {
-  border: none !important; /* Cleans up the weird borders in the screenshot */
-  gap: 20px !important;
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 20px !important;
+  border: none !important;
+  background: transparent !important;
 }
 
 .endorsement-card {
   background: white !important;
-  border-radius: 4px !important;
-  padding: 40px 20px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  padding: 30px 20px !important;
+  min-height: 280px !important;
+
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  min-height: 280px !important;
-  border: none !important;
+}
+
+.logo-wrapper {
+  width: 100% !important;
+  height: 140px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  margin-bottom: 20px !important;
+  overflow: visible !important;
 }
 
 .endorsement-card img {
-  /* THE HORSE FIX: This ensures the logo stays inside the box */
-  width: auto !important;
   max-width: 90% !important;
+  max-height: 140px !important;
+  width: auto !important;
   height: auto !important;
-  max-height: 100px !important; /* Keeps the horse from being too tall */
-  object-fit: contain !important; /* Shows the WHOLE logo */
-  margin-bottom: 20px !important;
+  object-fit: contain !important;
   display: block !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
 }
 
 .endorsement-card h3 {
@@ -243,59 +224,18 @@ main {
   margin: 0 !important;
 }
 
-/* --- SITE SPACING FIX --- */
-/* This ensures the content doesn't hide behind the header on the HOME PAGE */
+/* Home page spacing */
 main {
-  margin-top: 0 !important; /* The Hero section handles its own spacing */
+  margin-top: 0 !important;
 }
 
-/* This ensures the content doesn't hide behind the header on the ABOUT PAGE */
+/* About page spacing */
 .about-page-wrapper {
-  padding-top: 140px !important; 
-}
-
-/* --- CLEAN LAUNCH FIX --- */
-/* Hides those empty "Additional Endorsement" boxes so the site looks finished */
-.endorsement-placeholder {
-  display: none !important;
-}
-/* --- SURGICAL REPAIR BLOCK --- */
-
-/* 1. THE HORSE LOGO FIX */
-/* This targets only the endorsement images to stop the cropping */
-.endorsement-card img {
-  height: 110px !important;     /* Forces a height that fits the horse */
-  width: auto !important;       /* Keeps the proportions correct */
-  object-fit: contain !important; /* FORCES the whole logo to show */
-  padding: 10px !important;      /* Gives the horse some breathing room */
-  margin: 0 auto 15px !important;
-  display: block !important;
-}
-
-/* 2. THE HEADER OVERLAP FIX */
-/* This ensures the About Page starts below the logo */
-.about-page-wrapper {
-  padding-top: 160px !important; /* Pushes content down on the About Page only */
+  padding-top: 160px !important;
   background: white;
 }
 
-/* 3. CLEANUP FIX */
-/* Hides the empty blue boxes so the site looks finished for launch */
+/* Hide empty endorsement placeholders */
 .endorsement-placeholder {
   display: none !important;
-}
-
-/* 4. ENDORSEMENT GRID FIX */
-/* Makes the three logos center themselves and look professional */
-.endorsements__grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-  gap: 20px !important;
-  border: none !important;
-  background: transparent !important;
-}
-
-.endorsement-card {
-  border: 1px solid #e2e8f0 !important; /* Adds a clean subtle border */
-  border-radius: 8px !important;
 }
