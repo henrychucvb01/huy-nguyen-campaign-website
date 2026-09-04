@@ -239,3 +239,8 @@ main {
 .endorsement-placeholder {
   display: none !important;
 }
+/* Teamsters Local 572 logo has extra empty space inside its PNG */
+.endorsement-card img[alt*="Teamsters Local 572"] {
+  transform: scale(1.8) !important;
+  transform-origin: center !important;
+}
