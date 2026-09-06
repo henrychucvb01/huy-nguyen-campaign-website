@@ -23,10 +23,9 @@
 .involved-form__checkboxes input { width: 18px; height: 18px; margin: .05rem 0 0; flex: 0 0 auto; accent-color: var(--red); }
 .involved-form__checkboxes label > span { font-size: .78rem; letter-spacing: .04em; line-height: 1.45; }
 .involved-form__submit { margin-top: 2.5rem; padding-right: 2.5rem; padding-left: 2.5rem; cursor: pointer; }
-.involved-form__connection-note, .involved-form__status { max-width: 650px; color: #aebdce; font-size: .78rem; line-height: 1.55; }
-.involved-form__connection-note { margin: 1rem 0 0; }
-.involved-form__connection-note a { color: var(--white); }
+.involved-form__submit:disabled { opacity: .65; cursor: wait; transform: none; }
 .involved-form__status { margin: 1rem 0 0; padding: .9rem 1rem; border-left: 3px solid var(--red); color: var(--white); background: rgba(255,255,255,.08); }
+.involved-form__status--success { border-left-color: #4fd1a1; }
 
 @media (max-width: 1000px) {
   .involved-hero { grid-template-columns: 1fr; }

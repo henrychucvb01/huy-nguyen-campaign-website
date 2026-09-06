@@ -10,10 +10,9 @@ export default function Footer() {
           <div className="footer-support">
             <p className="footer-support__heading">Support</p>
             <a href="tel:+15625905550">+1-562 590-5550</a>
-            <a href="mailto:info@votenguyen4lbcc.com">info@votenguyen4lbcc.com</a>
           </div>
           <nav className="footer-links" aria-label="Footer navigation">
-            <a href="mailto:info@votenguyen4lbcc.com">Contact</a>
+            <a href="/get-involved">Contact</a>
             <a href="#privacy">Privacy Policy</a>
             <a href="#accessibility">Accessibility</a>
           </nav>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import '../get-involved-page.css'
 
 const involvementOptions = [
@@ -18,11 +18,48 @@ function getInitialInterests() {
 
 export default function GetInvolvedPage() {
   const [interests, setInterests] = useState(getInitialInterests)
-  const [showConnectionNotice, setShowConnectionNotice] = useState(false)
+  const [submissionStatus, setSubmissionStatus] = useState('idle')
+  const [submissionMessage, setSubmissionMessage] = useState('')
+  const submissionId = useRef(null)
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    setShowConnectionNotice(true)
+    if (submissionStatus === 'sending') return
+
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    submissionId.current ??= crypto.randomUUID()
+    setSubmissionStatus('sending')
+    setSubmissionMessage('')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: formData.get('firstName'),
+          lastName: formData.get('lastName'),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          zipCode: formData.get('zipCode'),
+          message: formData.get('message'),
+          interests: formData.getAll('interests'),
+          submissionId: submissionId.current,
+        }),
+      })
+      const result = await response.json().catch(() => ({}))
+
+      if (!response.ok) throw new Error(result.error || 'Your message could not be sent.')
+
+      form.reset()
+      setInterests({})
+      submissionId.current = null
+      setSubmissionStatus('success')
+      setSubmissionMessage('Thank you. Your message has been sent to the campaign.')
+    } catch (error) {
+      setSubmissionStatus('error')
+      setSubmissionMessage(error instanceof Error ? error.message : 'Your message could not be sent. Please try again.')
+    }
   }
 
   return (
@@ -86,14 +123,16 @@ export default function GetInvolvedPage() {
               </div>
             </fieldset>
 
-            <button className="button button--red involved-form__submit" type="submit">Submit</button>
-            <p className="involved-form__connection-note">
-              Online submission is not connected yet. For immediate help, email{' '}
-              <a href="mailto:info@votenguyen4lbcc.com">info@votenguyen4lbcc.com</a>.
-            </p>
-            {showConnectionNotice && (
-              <p className="involved-form__status" role="status">
-                Your information has not been sent. Please use the campaign email above while online submissions are being connected.
+            <button
+              className="button button--red involved-form__submit"
+              type="submit"
+              disabled={submissionStatus === 'sending'}
+            >
+              {submissionStatus === 'sending' ? 'Sending…' : 'Submit'}
+            </button>
+            {submissionMessage && (
+              <p className={`involved-form__status involved-form__status--${submissionStatus}`} role="status" aria-live="polite">
+                {submissionMessage}
               </p>
             )}
           </form>

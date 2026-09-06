@@ -38,9 +38,13 @@
 }
 
 @media (max-width: 520px) {
+  .hero {
+    overflow: clip;
+  }
+
   .hero__candidate.hero__candidate--full {
     height: 74%;
     right: -12%;
-    bottom: -20%;
+    bottom: -42%;
   }
 }
