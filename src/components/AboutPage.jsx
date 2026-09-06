@@ -1,112 +1,75 @@
-import React from 'react';
-import '../about-page.css';
+import '../about-page.css'
 
-const AboutPage = () => {
+const photos = {
+  community: '/images/about/community.jpg',
+  military: '/images/about/military.jpg',
+  library: '/images/about/library-family.jpg',
+  family: '/images/about/family.jpg',
+}
+
+export default function AboutPage() {
   return (
-    <div className="about-page-wrapper">
-      
-      {/* SECTION 1: INTRO & MAIN PHOTO */}
-      <section className="about-section">
-        <div className="about-container grid-row">
-          <div className="story-text">
-            <span className="about-kicker">Meet Huy</span>
-            <h1>Service Has Shaped Every Chapter of His Life.</h1>
-            <p>
-              Huy “Henry” Nguyen grew up in a working-class family in Southern California. 
-              His father was a postal worker, and his mother sewed clothes in a garment factory 
-              to provide for their family. From them, he learned the values of hard work, 
-              perseverance, and community.
-            </p>
-          </div>
-          <div className="story-image">
-            {/* Using the hero cutout or main portrait here */}
-            <img src="/images/hero/huy-nguyen-full.webp" alt="Huy Nguyen" />
-          </div>
+    <main className="about-page" id="about-top">
+      <section className="about-hero">
+        <div className="about-hero__copy">
+          <p className="about-kicker">Meet Huy</p>
+          <h1>Service has shaped every chapter of his life.</h1>
+          <p>Huy “Henry” Nguyen grew up in a working-class Southern California family. His father was a postal worker, and his mother sewed clothes in a garment factory to provide for their family.</p>
+          <p>From them, Huy learned the values that have guided his life: <strong>work hard, persevere, serve your community, and never stop learning.</strong></p>
+        </div>
+        <figure className="about-photo about-photo--hero"><img src={photos.community} alt="Huy Nguyen speaking with members of the community" /></figure>
+      </section>
+
+      <section className="about-stats" aria-label="Huy Nguyen experience">
+        <div><strong>26</strong><span>Years Public Service</span></div>
+        <div><strong>10</strong><span>Years U.S. Air Force</span></div>
+        <div><strong>3</strong><span>Degrees</span></div>
+        <div><strong>16</strong><span>Years Public Education</span></div>
+      </section>
+
+      <section className="about-story about-story--navy">
+        <figure className="about-photo"><img src={photos.military} alt="Huy Nguyen during his military service" /></figure>
+        <div className="about-story__copy">
+          <p className="about-kicker">Service to Country</p>
+          <h2>A lifetime of service.</h2>
+          <p>Huy spent 10 years in the United States Air Force, rising to the rank of Staff Sergeant and serving overseas, including in Turkey and Afghanistan.</p>
+          <p>His military service taught him discipline, accountability, teamwork, and how to lead under pressure—lessons that continue to guide his approach to public service.</p>
         </div>
       </section>
 
-      {/* SECTION 2: CAREER (ZIG-ZAG) */}
-      <section className="about-section gray-bg">
-        <div className="about-container grid-row reverse">
-          <div className="story-text">
-            <h2>25 Years of Leadership</h2>
-            <p>
-              With over 15 years at LAUSD and a current role as a School District Administrator 
-              for Teamsters Local 572, Huy manages multimillion-dollar budgets and meal 
-              programs that feed thousands of students daily. This experience has equipped 
-              him with the accountability needed for the LBCC Board.
-            </p>
-          </div>
-          <div className="story-image">
-            <img src="/images/about/community.jpg" alt="Community Leadership" />
-          </div>
+      <section className="about-story about-story--light about-story--reverse">
+        <figure className="about-photo"><img src={photos.library} alt="Huy Nguyen with his family at a Long Beach community event" /></figure>
+        <div className="about-story__copy">
+          <p className="about-kicker">Service to Students</p>
+          <h2>16 years in public education.</h2>
+          <p>After serving his country, Huy continued his public service in education. Today, as a school district administrator, he oversees operations across 28 school sites, 113 employees, and programs serving thousands of student meals.</p>
+          <p>His work has given him firsthand experience managing people, multimillion-dollar operations, and the everyday challenges facing students, families, and frontline education employees.</p>
         </div>
       </section>
 
-      {/* SECTION 3: MILITARY */}
-      <section className="about-section">
-        <div className="about-container grid-row">
-          <div className="story-text">
-            <h2>A Veteran’s Discipline</h2>
-            <p>
-              A veteran U.S. Air Force Staff Sergeant, Huy served two tours of duty in Turkey 
-              and Afghanistan. His military experience instilled in him a deep sense of 
-              discipline, leadership under pressure, and an enduring commitment to service.
-            </p>
-          </div>
-          <div className="story-image">
-            <img src="/images/about/military.jpg" alt="Military Service" />
-          </div>
+      <section className="about-education">
+        <div className="about-education__intro">
+          <p className="about-kicker">Lifelong Learner</p>
+          <h2>Education opened doors for Huy. He wants those same doors open for every LBCC student.</h2>
+        </div>
+        <div className="about-degrees">
+          <article><strong>B.A.</strong><h3>Behavioral Science</h3><p>Cal Poly Pomona</p></article>
+          <article><strong>M.S.</strong><h3>Management Information Systems</h3><p>Bowie State University</p></article>
+          <article><strong>MBA</strong><h3>Finance</h3><p>California State University, Long Beach</p></article>
         </div>
       </section>
 
-      {/* SECTION 4: EDUCATION & VISION */}
-      <section className="about-section light-blue-bg">
-        <div className="about-container grid-row reverse">
-          <div className="story-text">
-            <h2>A Lifelong Learner</h2>
-            <p>
-              Huy holds an MBA in Finance from CSULB and degrees from Cal Poly Pomona and 
-              Bowie State. He believes education is the bridge to opportunity and is 
-              running to ensure LBCC remains a pathway to the middle class.
-            </p>
-          </div>
-          <div className="story-image">
-            <img src="/images/about/library-family.jpg" alt="Education" />
-          </div>
+      <section className="about-story about-story--family">
+        <figure className="about-photo"><img src={photos.family} alt="Huy Nguyen with his family" /></figure>
+        <div className="about-story__copy">
+          <p className="about-kicker">The Next Chapter</p>
+          <h2>Now, Huy is ready to bring 26 years of public service to LBCC.</h2>
+          <p>Huy is running for the Long Beach Community College District Board of Trustees because he believes community college should be one of the strongest pathways to opportunity for students and working families.</p>
+          <p>As a veteran, public education administrator, working-family advocate, father, and lifelong learner, Huy will bring practical experience and a service-first approach to the Board.</p>
+          <p className="about-closing">For Huy, this campaign is the next chapter in a lifetime of service.</p>
+          <a className="button button--red" href="/#three-fs"><span>See Huy’s Vision</span><span className="button__arrow" aria-hidden="true">→</span></a>
         </div>
       </section>
-
-      {/* SECTION 5: FAMILY (NOW AT THE BOTTOM) */}
-      <section className="about-section">
-        <div className="about-container grid-row">
-          <div className="story-text">
-            <h2>Rooted in Long Beach</h2>
-            <p>
-              Huy is a dedicated family man who understands the challenges facing working 
-              families today. His passion for learning and belief in education as the 
-              bridge to opportunity inspire his vision to build a stronger Long Beach 
-              City College.
-            </p>
-            <p className="closing-quote">
-              "I am running to build a stronger Long Beach City College that empowers 
-              the next generation to succeed."
-            </p>
-          </div>
-          <div className="story-image">
-            <img src="/images/about/family.jpg" alt="Huy Nguyen Family" />
-          </div>
-        </div>
-      </section>
-
-      <section className="about-cta-section">
-        <div className="about-container text-center">
-          <a href="/#get-involved" className="cta-button">Join the Campaign</a>
-        </div>
-      </section>
-
-    </div>
-  );
-};
-
-export default AboutPage;
+    </main>
+  )
+}

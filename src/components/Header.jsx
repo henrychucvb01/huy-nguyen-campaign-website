@@ -5,8 +5,8 @@ const links = [
   ['About Huy', '/about'],
   ['3 F’s', '/#three-fs'],
   ['Experience', '/#experience'],
-  ['Endorsements', '/#endorsements'],
-  ['Get Involved', '/#get-involved'],
+  ['Endorsements', '/endorsements'],
+  ['Get Involved', '/get-involved'],
   ['News', '/#news'],
   ['Contact', '/#contact'],
 ]
@@ -14,9 +14,10 @@ const links = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const closeMenu = () => setIsOpen(false)
+  const isGetInvolvedPage = window.location.pathname.startsWith('/get-involved')
 
   return (
-    <header className="site-header">
+    <header className={`site-header${isGetInvolvedPage ? ' site-header--solid' : ''}`}>
       <CampaignLogo />
       <button
         className="menu-button"

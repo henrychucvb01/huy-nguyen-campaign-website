@@ -4,14 +4,14 @@ const actions = [
     title: 'Volunteer',
     text: 'Join neighbors across Long Beach working to move LBCC forward.',
     link: 'Sign Up to Help',
-    href: '#contact',
+    href: '/get-involved?interest=volunteer',
   },
   {
     number: '02',
     title: 'Endorse',
     text: 'Add your name and voice to the growing community supporting Huy.',
     link: 'Endorse Huy',
-    href: '#contact',
+    href: '/get-involved?interest=endorse',
   },
   {
     number: '03',

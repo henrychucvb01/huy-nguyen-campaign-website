@@ -1,5 +1,5 @@
 .site-header { min-height: 92px; padding: 0 clamp(1.25rem, 4vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 2rem; position: sticky; top: 0; z-index: 50; border-bottom: 1px solid rgba(7, 26, 56, .1); background: rgba(255, 255, 255, .97); backdrop-filter: blur(16px); }
-.campaign-logo { flex: 0 0 auto; display: block; text-decoration: none; }
+.campaign-logo { flex: 0 0 auto; display: block; text-decoration: none; cursor: pointer; }
 .campaign-logo img { width: clamp(150px, 14vw, 205px); height: auto; display: block; }
 .site-nav { display: flex; align-items: center; gap: clamp(.9rem, 1.7vw, 1.6rem); }
 .site-nav > a:not(.button) { color: var(--navy); font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-decoration: none; text-transform: uppercase; }
@@ -74,12 +74,39 @@ h1, h2, h3 { margin-top: 0; font-family: 'Barlow Condensed', Impact, sans-serif;
 .endorsements { color: var(--white); background: var(--navy); }
 .endorsements .section-heading h2 { color: var(--white); }
 .endorsements .section-heading__intro { color: #b9c8d9; }
-.endorsements__grid { margin: 4rem 0 2.5rem; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.18); border-left: 1px solid rgba(255,255,255,.18); }
-.endorsement-card, .endorsement-placeholder { min-height: 220px; padding: 1.5rem; border-right: 1px solid rgba(255,255,255,.18); border-bottom: 1px solid rgba(255,255,255,.18); }
-.endorsement-card { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem; color: var(--navy); background: var(--white); text-align: center; }
-.endorsement-card img { width: min(100%, 190px); height: 120px; display: block; object-fit: contain; }
-.endorsement-card h3 { margin: 0; color: var(--navy); font-family: 'Inter', Arial, sans-serif; font-size: .76rem; font-weight: 800; letter-spacing: .06em; line-height: 1.35; text-transform: uppercase; }
-.endorsement-placeholder { display: grid; place-items: center; color: #9fb1c6; font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-align: center; text-transform: uppercase; }
+.endorsements__heading span { display: block; }
+.endorsements__grid { margin: clamp(4rem, 7vw, 6.5rem) 0 0; padding-bottom: 45px; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(3rem, 6vw, 6rem); }
+.endorsement-logo { min-width: 0; min-height: 250px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1.5rem; text-align: center; }
+.endorsement-logo__image { width: 100%; height: 150px; display: grid; place-items: center; }
+.endorsement-logo img { width: min(100%, 245px); height: 100%; display: block; object-fit: contain; }
+.endorsement-logo--lbccfa { justify-content: center; }
+.lbccfa-image-wrap { max-width: 100%; padding: 10px 14px; display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; background: var(--white); transform: translateY(36px); }
+.endorsement-logo--lbccfa img { width: 100%; max-width: 250px; height: auto; object-fit: contain; }
+.endorsement-actions { width: 100%; margin-top: 32px; display: flex; justify-content: center; }
+.endorsement-actions a { min-height: 48px; padding-right: 28px; padding-left: 28px; border-color: rgba(255,255,255,.8); }
+
+.endorsements-hero { padding: clamp(6rem, 10vw, 9.5rem) clamp(1.25rem, 6vw, 6rem); background: var(--off-white); }
+.endorsements-hero__inner { max-width: 900px; }
+.endorsements-hero h1 { margin: 0; font-size: clamp(4.5rem, 9vw, 8.5rem); letter-spacing: -.045em; }
+.endorsements-hero__inner > p:last-child { max-width: 760px; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.8; }
+.organization-endorsements { padding: clamp(5.5rem, 10vw, 10rem) clamp(1.25rem, 6vw, 6rem); background: var(--white); }
+.organization-endorsements__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(4.5rem, 8vw, 8rem) clamp(2.5rem, 5vw, 5rem); }
+.organization-endorsement { min-width: 0; text-align: center; }
+.organization-endorsement__visual { height: 190px; display: grid; place-items: center; }
+.organization-endorsement__visual img { width: min(100%, 255px); height: 100%; display: block; object-fit: contain; }
+.organization-endorsement__visual--text { height: auto; min-height: 190px; align-content: center; border-top: 2px solid var(--red); border-bottom: 1px solid var(--line); }
+.organization-endorsement__visual span { max-width: 300px; color: var(--navy); font-family: 'Barlow Condensed', Impact, sans-serif; font-size: clamp(1.55rem, 2.2vw, 2rem); font-weight: 800; line-height: 1.12; text-transform: uppercase; }
+.organization-endorsement:nth-child(4) img { width: min(100%, 225px); }
+.organization-endorsement:nth-child(7) img,
+.organization-endorsement:nth-child(8) img,
+.organization-endorsement:nth-child(9) img { border-radius: 50%; }
+.individual-endorsements { padding: clamp(5.5rem, 9vw, 8.5rem) clamp(1.25rem, 6vw, 6rem); color: var(--white); background: var(--navy); }
+.individual-endorsements__heading { max-width: 790px; }
+.individual-endorsements__heading h2 { margin: 0; color: var(--white); font-size: clamp(3.5rem, 7vw, 6.5rem); letter-spacing: -.035em; }
+.individual-endorsements__grid { margin-top: clamp(3.5rem, 6vw, 5.5rem); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.25rem clamp(2rem, 5vw, 5rem); }
+.individual-endorsement { padding: 1.25rem 0 1.5rem; border-top: 2px solid var(--red); }
+.individual-endorsement h3 { margin: 0; color: var(--white); font-size: clamp(1.8rem, 3vw, 2.5rem); letter-spacing: -.01em; }
+.individual-endorsement p { margin: .7rem 0 0; color: #b9c8d9; line-height: 1.55; }
 .anchor-target { display: block; scroll-margin-top: 92px; }
 
 .get-involved { background: var(--white); }
@@ -120,6 +147,10 @@ h1, h2, h3 { margin-top: 0; font-family: 'Barlow Condensed', Impact, sans-serif;
   .hero__candidate { right: -5%; height: 92%; max-width: 58vw; }
 }
 
+@media (min-width: 1440px) {
+  .organization-endorsements__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
 @media (max-width: 820px) {
   .hero { min-height: 860px; }
   .hero::before { background: linear-gradient(180deg, rgba(7,26,56,.98) 0%, rgba(7,26,56,.93) 52%, rgba(7,26,56,.58) 72%, rgba(7,26,56,.2) 100%); }
@@ -137,6 +168,8 @@ h1, h2, h3 { margin-top: 0; font-family: 'Barlow Condensed', Impact, sans-serif;
   .experience-stat:first-child { padding-left: 1.4rem; }
   .experience-stat:nth-child(3), .experience-stat:last-child { border-bottom: 0; }
   .endorsements__grid { grid-template-columns: repeat(2, 1fr); }
+  .organization-endorsements__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .individual-endorsements__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .site-footer__top { grid-template-columns: 1fr 1fr; }
   .footer-links { grid-column: 1 / -1; justify-content: flex-start; }
   .site-footer__bottom { flex-direction: column; }
@@ -163,84 +196,8 @@ h1, h2, h3 { margin-top: 0; font-family: 'Barlow Condensed', Impact, sans-serif;
   .experience-stat:first-child { padding-left: 0; }
   .experience-stat:last-child { border-bottom: 0; }
   .endorsements__grid { grid-template-columns: 1fr; }
+  .organization-endorsements__grid, .individual-endorsements__grid { grid-template-columns: 1fr; }
+  .organization-endorsement__visual { height: 145px; }
   .site-footer__top { grid-template-columns: 1fr; }
   .footer-links { grid-column: auto; }
-}
-/* --- ENDORSEMENTS CLEAN FIX --- */
-
-.endorsements {
-  background: #071a38 !important;
-}
-
-.endorsements__grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-  gap: 20px !important;
-  border: none !important;
-  background: transparent !important;
-}
-
-.endorsement-card {
-  background: white !important;
-  border: 1px solid #e2e8f0 !important;
-  border-radius: 8px !important;
-  padding: 30px 20px !important;
-  min-height: 280px !important;
-
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.logo-wrapper {
-  width: 100% !important;
-  height: 140px !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  margin-bottom: 20px !important;
-  overflow: visible !important;
-}
-
-.endorsement-card img {
-  max-width: 90% !important;
-  max-height: 140px !important;
-  width: auto !important;
-  height: auto !important;
-  object-fit: contain !important;
-  display: block !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
-}
-
-.endorsement-card h3 {
-  color: #071a38 !important;
-  font-size: 0.85rem !important;
-  font-family: sans-serif !important;
-  letter-spacing: 1px !important;
-  margin: 0 !important;
-}
-
-/* Home page spacing */
-main {
-  margin-top: 0 !important;
-}
-
-/* About page spacing */
-.about-page-wrapper {
-  padding-top: 160px !important;
-  background: white;
-}
-
-/* Hide empty endorsement placeholders */
-.endorsement-placeholder {
-  display: none !important;
-}
-/* Teamsters Local 572 logo has extra empty space inside its PNG */
-.endorsement-card img[alt*="Teamsters Local 572"] {
-  transform: scale(1.8) !important;
-  transform-origin: center !important;
 }
