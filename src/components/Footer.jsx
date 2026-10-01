@@ -13,12 +13,13 @@ export default function Footer() {
           </div>
           <nav className="footer-links" aria-label="Footer navigation">
             <a href="/get-involved">Contact</a>
-            <a href="#privacy">Privacy Policy</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms-and-conditions">Terms and Conditions</a>
             <a href="#accessibility">Accessibility</a>
           </nav>
         </div>
         <div className="site-footer__bottom">
-          <p className="footer-disclaimer" id="privacy">
+          <p className="footer-disclaimer">
             Paid for by Huy Nguyen for LBCCD Trustee 2026<br />
             (ID #1484027)
           </p>

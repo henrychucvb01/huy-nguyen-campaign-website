@@ -9,6 +9,7 @@ import GetInvolved from './components/GetInvolved'
 import GetInvolvedPage from './components/GetInvolvedPage'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import LegalPage from './components/LegalPage'
 import ThreeFs from './components/ThreeFs'
 import WhyHuy from './components/WhyHuy'
 
@@ -32,11 +33,17 @@ function App() {
     window.location.pathname === '/endorsements' || window.location.pathname === '/endorsements/'
   const isGetInvolvedPage =
     window.location.pathname === '/get-involved' || window.location.pathname === '/get-involved/'
+  const isPrivacyPage =
+    window.location.pathname === '/privacy-policy' || window.location.pathname === '/privacy-policy/'
+  const isTermsPage =
+    window.location.pathname === '/terms-and-conditions' || window.location.pathname === '/terms-and-conditions/'
 
   let page = <HomePage />
   if (isAboutPage) page = <AboutPage />
   if (isEndorsementsPage) page = <EndorsementsPage />
   if (isGetInvolvedPage) page = <GetInvolvedPage />
+  if (isPrivacyPage) page = <LegalPage type="privacy" />
+  if (isTermsPage) page = <LegalPage type="terms" />
 
   return (
     <>
