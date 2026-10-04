@@ -16,10 +16,14 @@
   color: #fff;
 }
 
-.experience-stat__icon svg {
+.experience-stat__icon svg,
+.experience-stat__icon img {
   width: 100%;
   height: 100%;
+  max-width: 74px;
+  max-height: 74px;
   display: block;
+  object-fit: contain;
 }
 
 .experience-stat__text {
