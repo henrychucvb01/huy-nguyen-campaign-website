@@ -28,7 +28,8 @@
 .about-story--family .about-photo img { width: 100%; max-height: none; }
 .about-photo--students, .about-photo--lbcc { max-width: 680px; }
 .about-photo--students img, .about-photo--lbcc img { width: 100%; aspect-ratio: 3 / 2; max-height: none; object-fit: cover; }
-.about-photo--students img { object-position: center; }
+.about-photo--students { overflow: hidden; }
+.about-photo--students img { object-position: center bottom; transform: scale(1.38); transform-origin: center bottom; }
 .about-photo--lbcc img { object-position: 48% center; }
 .about-education { padding: clamp(5rem, 9vw, 9rem) clamp(1.5rem, 6vw, 7rem); background: #fff; }
 .about-education__intro { max-width: 1050px; }
