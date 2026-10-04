@@ -2,12 +2,18 @@ export default function WhyHuy() {
   return (
     <section className="section why-huy" id="about">
       <div className="section__inner why-huy__grid">
-        <div className="photo-stack" aria-label="Temporary campaign photo areas">
-          <div className="story-placeholder story-placeholder--primary" role="img" aria-label="Candidate portrait placeholder">
-            Candidate photo
+        <div className="photo-stack" aria-label="Huy Nguyen at Long Beach City College">
+          <div className="story-photo story-photo--primary">
+            <img
+              src="/images/about/LBCCCandidate-117%20(Modified).jpg"
+              alt="Huy Nguyen with a community supporter at Long Beach City College"
+            />
           </div>
-          <div className="story-placeholder story-placeholder--secondary" role="img" aria-label="Long Beach community photo placeholder">
-            Long Beach community photo
+          <div className="story-photo story-photo--secondary">
+            <img
+              src="/images/about/LBCCCandidate-264.jpg"
+              alt="Huy Nguyen inside the Long Beach City College gym"
+            />
           </div>
         </div>
         <div className="why-huy__copy">
