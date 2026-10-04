@@ -86,17 +86,23 @@ function TermsAndConditions() {
         which you wish to unsubscribe.
       </p>
 
-      <h2>Help</h2>
+      <h2>Support</h2>
       <p>
-        For assistance, reply HELP to the number from which you received a message, visit our{' '}
-        <a href="/get-involved">contact page</a>, or call{' '}
-        <a href="tel:+15625905550">562-590-5550</a>.
+        For support regarding the Program, text “HELP” to the applicable Program’s Short Code or 
+        long code or email us at votenguyen4lbcc@gmail.com. Please note that the use of 
+        this email address, or texting “HELP” to the Program’s Short or long Code is not an acceptable 
+        method of opting out of the program. Opt-outs must be submitted in accordance with the 
+        procedures set forth above. Our Disclaimer of Warranty The Programs are offered on an "as-is" 
+        basis and may not be available in all areas at all times and may not continue to work in the event of product, software, 
+        coverage or other changes made by your wireless carrier. We will not be liable for any delays or failures 
+        in the receipt of any mobile messages connected with any Program. Delivery of mobile messages is subject to 
+        effective transmission from your wireless service provider/network operator, and is outside of our control. 
+        We are not liable for delayed or undelivered mobile messages.
       </p>
 
-      <h2>Privacy</h2>
+      <h2>Privacy Policy</h2>
       <p>
-        Please review our <a href="/privacy-policy">Privacy Policy</a> for information about how we
-        collect, use, and protect personal information.
+    We respect your privacy. We will only use information you provide to transmit your mobile messages and respond to you, if necessary. This includes sharing information with our program partners, message content providers, phone companies, and vendors who assist us in the delivery of mobile messages. EXCEPT AS SET FORTH IN THIS SECTION, WE DO NOT SELL, RENT, LOAN, TRADE, LEASE OR OTHERWISE TRANSFER FOR PROFIT ANY PHONE NUMBERS OR CUSTOMER INFORMATION COLLECTED THROUGH PROGRAMS TO ANY THIRD PARTY. Nonetheless, we reserve the right at all times to disclose any information as necessary to satisfy any law, regulation or governmental request, to avoid liability, or to protect our rights or property. When you complete forms online or otherwise provide us information in connection with a Program, you agree to provide accurate, complete, and true information. You agree not to use a false or misleading name or a name that you are not authorized to use. If in our sole discretion, we believe that any such information is untrue, inaccurate, or incomplete, or you have opted into a Program for an ulterior purpose, we may refuse you access to the Program and pursue any appropriate legal remedies. This Privacy Policy and Terms and Conditions is strictly limited to these texting Programs and has no effect on any other privacy policy(ies) that may govern the relationship between you and us in other contexts.
       </p>
     </>
   )
