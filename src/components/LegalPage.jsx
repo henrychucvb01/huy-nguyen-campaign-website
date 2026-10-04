@@ -48,11 +48,9 @@ function TermsAndConditions() {
         that you designate.
       </p>
       <p>
-        The types of messages you may receive include informational messages, recurring marketing
-        messages, campaign updates, fundraising messages, donation solicitations, event notices,
-        volunteer opportunities, election reminders, and on-demand replies. These messages are
-        collectively referred to as the “Programs.” Consent to receive automated marketing text
-        messages is not a condition of any purchase or contribution.
+       The types of messages you may receive include marketing, informational and donation requests. 
+        Donations may be solicited. This shall all be known collectively as the “Programs." 
+        Consent to receive automated marketing text messages is not a condition of any purchase or contribution.
       </p>
 
       <h2>Cost</h2>
