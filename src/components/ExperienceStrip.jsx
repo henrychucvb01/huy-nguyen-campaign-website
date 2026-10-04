@@ -11,7 +11,7 @@ function CivicIcon() {
 function AirForceIcon() {
   return (
     <img
-      src="/images/air-force-white.png"
+      src="/images/icons/air-force-white.png"
       alt=""
       aria-hidden="true"
     />
