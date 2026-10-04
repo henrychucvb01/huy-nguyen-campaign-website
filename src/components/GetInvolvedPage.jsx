@@ -66,7 +66,7 @@ export default function GetInvolvedPage() {
     <main className="involved-page">
       <section className="involved-hero">
         <div className="involved-hero__photo">
-          <img src="/images/about/community.jpg" alt="Huy Nguyen meeting with members of the community" />
+          <img src="/images/about/LBCCCandidate-193.jpg" alt="Huy Nguyen on the Long Beach City College campus" />
         </div>
         <div className="involved-hero__form-panel">
           <div className="involved-hero__heading">
