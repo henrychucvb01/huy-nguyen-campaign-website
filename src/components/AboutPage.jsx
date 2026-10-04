@@ -1,10 +1,10 @@
 import '../about-page.css'
 
 const photos = {
-  community: '/images/about/community.jpg',
+  hero: '/images/about/LBCCCandidate-249.jpg',
   military: '/images/about/military.jpg',
-  library: '/images/about/library-family.jpg',
-  family: '/images/about/family.jpg',
+  students: '/images/about/LBCCCandidate-236.jpg',
+  lbcc: '/images/about/LBCCCandidate-280.jpg',
 }
 
 export default function AboutPage() {
@@ -17,7 +17,7 @@ export default function AboutPage() {
           <p>Huy “Henry” Nguyen grew up in a working-class Southern California family. His father was a postal worker, and his mother sewed clothes in a garment factory to provide for their family.</p>
           <p>From them, Huy learned the values that have guided his life: <strong>work hard, persevere, serve your community, and never stop learning.</strong></p>
         </div>
-        <figure className="about-photo about-photo--hero"><img src={photos.community} alt="Huy Nguyen speaking with members of the community" /></figure>
+        <figure className="about-photo about-photo--hero"><img src={photos.hero} alt="Portrait of Huy Nguyen" /></figure>
       </section>
 
       <section className="about-stats" aria-label="Huy Nguyen experience">
@@ -38,7 +38,7 @@ export default function AboutPage() {
       </section>
 
       <section className="about-story about-story--light about-story--reverse">
-        <figure className="about-photo"><img src={photos.library} alt="Huy Nguyen with his family at a Long Beach community event" /></figure>
+        <figure className="about-photo about-photo--students"><img src={photos.students} alt="Huy Nguyen in front of an LBCC student mural" /></figure>
         <div className="about-story__copy">
           <p className="about-kicker">Service to Students</p>
           <h2>16 years in public education.</h2>
@@ -60,7 +60,7 @@ export default function AboutPage() {
       </section>
 
       <section className="about-story about-story--family">
-        <figure className="about-photo"><img src={photos.family} alt="Huy Nguyen with his family" /></figure>
+        <figure className="about-photo about-photo--lbcc"><img src={photos.lbcc} alt="Huy Nguyen beside the Long Beach City College Liberal Arts Campus sign" /></figure>
         <div className="about-story__copy">
           <p className="about-kicker">The Next Chapter</p>
           <h2>Now, Huy is ready to bring 26 years of public service to LBCC.</h2>
