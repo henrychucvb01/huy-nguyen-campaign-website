@@ -53,6 +53,7 @@ export const endorsements = [
   { name: 'Tunua Thrash-Ntuk', type: 'individual' },
   { name: 'Trisha Murakawa', type: 'individual' },
   { name: 'Patrice McKenzie', type: 'individual' },
+  { name: 'Tara Riggi', type: 'individual' },
 ]
 
 export const featuredOrganizations = endorsements.filter(
