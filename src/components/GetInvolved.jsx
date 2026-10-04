@@ -36,6 +36,7 @@ export default function GetInvolved() {
           {actions.map((action) => (
             <article className={`involvement-card${action.featured ? ' involvement-card--featured' : ''}`} key={action.title}>
               <span className="involvement-card__icon" aria-hidden="true">{action.number}</span>
+           
               <h3>{action.title}</h3>
               <p>{action.text}</p>
               <a
@@ -47,7 +48,17 @@ export default function GetInvolved() {
               </a>
             </article>
           ))}
+          
         </div>
+              <p className="get-involved__sms-disclaimer">
+               By providing your phone number, you are consenting to marketing, informational and donation requests, 
+               donations may be solicited TEXTS to that number from Huy Nguyen for LBCCD Trustee 2026 (ID #1484027) or 
+               Long Beach City College Faculty Association (ID #880734). We will provide alerts and other information. 
+               Msg & data rates may apply. Msg frequency will vary. Reply HELP for help, STOP to end.
+               <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+              {' and '}
+              <a href="/privacy-policy">Privacy Policy</a>.
+              </p>
       </div>
     </section>
   )
