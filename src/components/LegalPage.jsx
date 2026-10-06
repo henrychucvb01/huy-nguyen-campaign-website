@@ -12,7 +12,14 @@ function PrivacyPolicy() {
         consent or a legal obligation. Personal information includes your name, email address,
         phone number, and other contact information.
       </p>
-
+      
+      <h2>FACULTY ASSOCIATION</h2>
+      <p>
+        Long Beach City College Faculty Association (LBCCFA) PAC maintains strict privacy policies,
+        ensuring that the personal information of our users and members is not sold, rented,
+        released, or traded to others without prior consent or a legal obligation. Personal
+        information includes your name, email address, phone number, and other contact information.
+      </p>
       <h2>SMS Opt-Out</h2>
       <p>
         If you are receiving text messages from us and wish to stop receiving them, simply respond
