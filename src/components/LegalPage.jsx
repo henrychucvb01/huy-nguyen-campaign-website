@@ -59,7 +59,15 @@ function TermsAndConditions() {
         Donations may be solicited. This shall all be known collectively as the “Programs." 
         Consent to receive automated marketing text messages is not a condition of any purchase or contribution.
       </p>
-
+      
+      <h2>FACULTY ASSOCIATION</h2>
+      <p>
+        You agree to receive recurring automated text messages, including SMS and MMS messages,
+        from Long Beach City College Faculty Association (LBCCFA) PAC. These messages may be sent
+        using an automatic telephone dialing system to the mobile telephone number you provided
+        when signing up or to another number that you designate.
+      </p>
+      
       <h2>Cost</h2>
       <p>
         Message and data rates may apply. Please consult with your wireless carrier for rate
