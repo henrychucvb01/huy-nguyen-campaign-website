@@ -23,9 +23,8 @@
 .involved-form__checkboxes input { width: 18px; height: 18px; margin: .05rem 0 0; flex: 0 0 auto; accent-color: var(--red); }
 .involved-form__checkboxes label > span { font-size: .78rem; letter-spacing: .04em; line-height: 1.45; }
 .involved-form__submit { margin-top: 2.5rem; padding-right: 2.5rem; padding-left: 2.5rem; cursor: pointer; }
-.involved-form__sms-consent { display: flex; align-items: flex-start; gap: .75rem; margin-top: 1.5rem; }
-.involved-form__sms-consent input { width: 18px; height: 18px; margin: .18rem 0 0; flex: 0 0 auto; accent-color: var(--red); cursor: pointer; }
-.involved-form__sms-disclaimer { margin: 0; color: #c2cfdf; font-size: .72rem; line-height: 1.55; }
+.involved-form__sms-disclaimer { margin: 1.5rem 0 0; color: #c2cfdf; font-size: .72rem; line-height: 1.55; }
+.involved-form__sms-disclaimer input[type='checkbox'] { width: 18px; height: 18px; margin: 0 .45rem 0 0; vertical-align: -0.15em; accent-color: var(--red); cursor: pointer; }
 .involved-form__sms-disclaimer label { display: inline; color: inherit; font: inherit; letter-spacing: normal; text-transform: none; cursor: pointer; }
 .involved-form__sms-disclaimer a { color: var(--white); text-underline-offset: .16em; }
 .involved-form__submit:disabled { opacity: .65; cursor: wait; transform: none; }
