@@ -44,6 +44,7 @@ export default function GetInvolvedPage() {
           zipCode: formData.get('zipCode'),
           message: formData.get('message'),
           interests: formData.getAll('interests'),
+          smsConsent: formData.get('smsConsent') === 'on',
           submissionId: submissionId.current,
         }),
       })
@@ -131,18 +132,23 @@ export default function GetInvolvedPage() {
               {submissionStatus === 'sending' ? 'Sending…' : 'Submit'}
             </button>
 
-             <p className="get-involved__sms-disclaimer">
-              By providing your phone number, you are consenting to marketing, informational and
-              donation requests, donations may be solicited TEXTS to that number from Huy Nguyen
-              for LBCCD Trustee 2026 (ID #1484027) or Long Beach City College Faculty Association
-              (ID #880734). We will provide alerts and other information. Msg &amp; data rates may
-              apply. Msg frequency will vary. Reply HELP for help, STOP to end.{' '}
-              <a href="https://www.votenguyen4lbcc.com/terms-and-conditions">
-                Terms &amp; Conditions
-              </a>
-              {' and '}
-              <a href="https://www.votenguyen4lbcc.com/privacy-policy">Privacy Policy</a>.
-            </p>
+            <div className="involved-form__sms-consent">
+              <input id="sms-consent" name="smsConsent" type="checkbox" />
+              <p className="involved-form__sms-disclaimer">
+                <label htmlFor="sms-consent">
+                  By providing your phone number, you are consenting to marketing, informational and
+                  donation requests, donations may be solicited TEXTS to that number from Huy Nguyen
+                  for LBCCD Trustee 2026 (ID #1484027) or Long Beach City College Faculty Association
+                  (ID #880734). We will provide alerts and other information. Msg &amp; data rates may
+                  apply. Msg frequency will vary. Reply HELP for help, STOP to end.
+                </label>{' '}
+                <a href="https://www.votenguyen4lbcc.com/terms-and-conditions">
+                  Terms &amp; Conditions
+                </a>
+                {' and '}
+                <a href="https://www.votenguyen4lbcc.com/privacy-policy">Privacy Policy</a>.
+              </p>
+            </div>
             {submissionMessage && (
               <p className={`involved-form__status involved-form__status--${submissionStatus}`} role="status" aria-live="polite">
                 {submissionMessage}
