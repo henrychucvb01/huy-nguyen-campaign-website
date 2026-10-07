@@ -44,6 +44,7 @@ export default async function handler(request, response) {
   const lastName = cleanString(body.lastName, 80)
   const email = cleanString(body.email, 254)
   const phone = cleanString(body.phone, 40)
+  const smsConsent = body.smsConsent === true
   const zipCode = cleanString(body.zipCode, 10)
   const message = cleanString(body.message, 5000)
   const submissionId = cleanString(body.submissionId, 128)
@@ -81,6 +82,7 @@ export default async function handler(request, response) {
     ['Last Name', lastName],
     ['Email', email],
     ['Phone', phone || 'Not provided'],
+    ['SMS Text Consent', smsConsent ? 'Yes' : 'No'],
     ['ZIP Code', zipCode || 'Not provided'],
     ['Message', message || 'Not provided'],
     ['Involvement Options', selectedInterests.join(', ')],
