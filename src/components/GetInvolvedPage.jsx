@@ -57,7 +57,7 @@ export default function GetInvolvedPage() {
       submissionId.current = null
       setSubmissionStatus('success')
       setSubmissionMessage('Thank you. Your message has been sent to the campaign.')
-    } catch (error) {
+    } catch {
       setSubmissionStatus('error')
       setSubmissionMessage('We could not send your message. Please email the campaign directly.')
     }
