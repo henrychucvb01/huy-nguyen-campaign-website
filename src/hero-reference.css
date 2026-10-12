@@ -277,7 +277,7 @@
     backdrop-filter: blur(12px);
   }
   .campaign-logo { background: transparent; box-shadow: none; padding: 0; }
-  .site-nav { top: 96px; }
+  .site-nav { top: 108px; }
   .site-nav > a:not(.button)::after { display: none; }
   .hero { min-height: 860px; height: 860px; }
   .hero__content { width: 58%; padding: 150px 0 45px 2.4rem; }
@@ -309,7 +309,7 @@
 @media (max-width: 520px) {
   .campaign-logo img { width: 160px; height: auto; max-width: 160px; }
   .site-header { min-height: 96px; padding-inline: 1rem; }
-  .site-nav { top: 90px; }
+  .site-nav { top: 96px; }
   .hero { min-height: 850px; }
   .hero__campus { object-position: 57% center; }
   .hero__content {
