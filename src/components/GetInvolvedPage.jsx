@@ -40,7 +40,7 @@ export default function GetInvolvedPage() {
       ['SMS Consent', formData.get('smsConsent') === 'on' ? 'Yes' : 'No'],
     ]
     const emailSubject = `Get Involved Submission - ${formData.get('firstName') || ''} ${formData.get('lastName') || ''}`.trim()
-    const emailBody = emailFields.map(([label, value]) => `${label}: ${value}`).join('\\n\\n')
+    const emailBody = emailFields.map(([label, value]) => `${label}: ${value}`).join('\n\n')
     setEmailFallbackHref(`mailto:votenguyen4lbcc@gmail.com?${new URLSearchParams({ subject: emailSubject, body: emailBody })}`)
     submissionId.current ??= crypto.randomUUID()
     setSubmissionStatus('sending')
