@@ -141,7 +141,7 @@ h1, h2, h3 { margin-top: 0; font-family: 'Barlow Condensed', Impact, sans-serif;
 
 @media (max-width: 1120px) {
   .site-header { min-height: 82px; }
-  html { scroll-padding-top: 82px; }
+  html { scroll-padding-top: 90px; }
   .menu-button { display: grid; }
   .site-nav { padding: 1.3rem clamp(1.25rem, 4vw, 4rem) 1.7rem; display: none; align-items: stretch; position: absolute; top: 82px; left: 0; right: 0; flex-direction: column; gap: .35rem; border-bottom: 1px solid var(--line); background: var(--white); box-shadow: 0 25px 45px rgba(7,26,56,.13); }
   .site-nav.is-open { display: flex; }
@@ -179,7 +179,7 @@ h1, h2, h3 { margin-top: 0; font-family: 'Barlow Condensed', Impact, sans-serif;
 }
 
 @media (max-width: 520px) {
-  html { scroll-padding-top: 76px; }
+  html { scroll-padding-top: 90px; }
   .site-header { min-height: 76px; }
   .campaign-logo img { height: 66px; max-width: 150px; }
   .site-nav { top: 76px; }
