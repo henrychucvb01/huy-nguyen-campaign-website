@@ -8,7 +8,7 @@ const links = [
   ['Endorsements', '/endorsements'],
   ['Get Involved', '/get-involved'],
   ['News', '/#news'],
-  ['Contact', '/#contact'],
+  ['Contact', '/get-involved'],
 ]
 
 export default function Header() {

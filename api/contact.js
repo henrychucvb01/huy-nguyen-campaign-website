@@ -70,7 +70,7 @@ export default async function handler(request, response) {
 
   if (!apiKey || !recipient || !sender) {
     console.error('Contact email environment variables are not configured.')
-    return sendJson(response, 503, { error: 'The contact form is temporarily unavailable. Please try again later.' })
+    return sendJson(response, 503, { error: 'The online contact form is temporarily unavailable. Use the email link below instead.' })
   }
 
   const selectedInterests = interests.length

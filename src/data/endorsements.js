@@ -17,6 +17,11 @@ export const endorsements = [
     type: 'organization',
     featured: true,
   },
+  {
+    name: 'California Teachers Association (CTA)',
+    logo: '/images/endorsements/california-teachers-association-primary-signature.png',
+    type: 'organization',
+  },
   { name: 'VoteVets', logo: '/images/endorsements/votevets.png', type: 'organization' },
   {
     name: 'United Steelworkers Local 675',
@@ -48,12 +53,46 @@ export const endorsements = [
     logo: '/images/endorsements/faccc.png',
     type: 'organization',
   },
-  { name: 'Uduak-Joe Ntuk', type: 'individual' },
-  { name: 'Ennette Morton', type: 'individual' },
-  { name: 'Tunua Thrash-Ntuk', type: 'individual' },
-  { name: 'Trisha Murakawa', type: 'individual' },
-  { name: 'Patrice McKenzie', type: 'individual' },
-  { name: 'Tara Riggi', type: 'individual' },
+  {
+    name: 'Uduak-Joe Ntuk',
+    title: 'President, Long Beach City College Board of Trustees',
+    type: 'individual',
+  },
+  {
+    name: 'Dr. Ennette Morton',
+    title: 'Vice President, Long Beach City College Board of Trustees',
+    type: 'individual',
+  },
+  {
+    name: 'Tunua Thrash-Ntuk',
+    title: 'Long Beach City Councilmember, District 8',
+    type: 'individual',
+  },
+  {
+    name: 'Trisha Murakawa',
+    title: 'Vice President, El Camino Community College Board of Trustees',
+    type: 'individual',
+  },
+  {
+    name: 'Patrice Marshall McKenzie',
+    title: 'Board Member, Pasadena Unified School District, District 5',
+    type: 'individual',
+  },
+  {
+    name: 'Tara Riggi',
+    title: 'President, California Heights Neighborhood Association; Long Beach City Council District 5 Candidate',
+    type: 'individual',
+  },
+  {
+    name: 'Rae Gabelich',
+    title: 'Former Long Beach City Councilmember',
+    type: 'individual',
+  },
+  {
+    name: 'Jerry L. Shultz',
+    title: 'Former Long Beach City Councilmember; Former Long Beach Unified School District Board Member',
+    type: 'individual',
+  },
 ]
 
 export const featuredOrganizations = endorsements.filter(

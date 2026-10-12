@@ -29,6 +29,7 @@
 .involved-form__sms-disclaimer a { color: var(--white); text-underline-offset: .16em; }
 .involved-form__submit:disabled { opacity: .65; cursor: wait; transform: none; }
 .involved-form__status { margin: 1rem 0 0; padding: .9rem 1rem; border-left: 3px solid var(--red); color: var(--white); background: rgba(255,255,255,.08); }
+.involved-form__status a { color: var(--white); font-weight: 800; text-underline-offset: .18em; }
 .involved-form__status--success { border-left-color: #4fd1a1; }
 
 @media (max-width: 1000px) {

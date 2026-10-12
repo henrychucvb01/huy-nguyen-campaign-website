@@ -1,6 +1,6 @@
 .site-header { min-height: 92px; padding: 0 clamp(1.25rem, 4vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: 2rem; position: sticky; top: 0; z-index: 50; border-bottom: 1px solid rgba(7, 26, 56, .1); background: rgba(255, 255, 255, .97); backdrop-filter: blur(16px); }
 .campaign-logo { flex: 0 0 auto; display: block; text-decoration: none; cursor: pointer; }
-.campaign-logo img { width: clamp(150px, 14vw, 205px); height: auto; display: block; }
+.campaign-logo img { width: auto; height: 80px; max-width: 205px; display: block; object-fit: contain; }
 .site-nav { display: flex; align-items: center; gap: clamp(.9rem, 1.7vw, 1.6rem); }
 .site-nav > a:not(.button) { color: var(--navy); font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-decoration: none; text-transform: uppercase; }
 .site-nav > a:not(.button):hover { color: var(--red); }
@@ -99,10 +99,10 @@ h1, h2, h3 { margin-top: 0; font-family: 'Barlow Condensed', Impact, sans-serif;
 .organization-endorsement__visual img { width: min(100%, 255px); height: 100%; display: block; object-fit: contain; }
 .organization-endorsement__visual--text { height: auto; min-height: 190px; align-content: center; border-top: 2px solid var(--red); border-bottom: 1px solid var(--line); }
 .organization-endorsement__visual span { max-width: 300px; color: var(--navy); font-family: 'Barlow Condensed', Impact, sans-serif; font-size: clamp(1.55rem, 2.2vw, 2rem); font-weight: 800; line-height: 1.12; text-transform: uppercase; }
-.organization-endorsement:nth-child(4) img { width: min(100%, 225px); }
-.organization-endorsement:nth-child(7) img,
+.organization-endorsement:nth-child(5) img { width: min(100%, 225px); }
 .organization-endorsement:nth-child(8) img,
-.organization-endorsement:nth-child(9) img { border-radius: 50%; }
+.organization-endorsement:nth-child(9) img,
+.organization-endorsement:nth-child(10) img { border-radius: 50%; }
 .individual-endorsements { padding: clamp(5.5rem, 9vw, 8.5rem) clamp(1.25rem, 6vw, 6rem); color: var(--white); background: var(--navy); }
 .individual-endorsements__heading { max-width: 790px; }
 .individual-endorsements__heading h2 { margin: 0; color: var(--white); font-size: clamp(3.5rem, 7vw, 6.5rem); letter-spacing: -.035em; }
@@ -110,6 +110,7 @@ h1, h2, h3 { margin-top: 0; font-family: 'Barlow Condensed', Impact, sans-serif;
 .individual-endorsement { padding: 1.25rem 0 1.5rem; border-top: 2px solid var(--red); }
 .individual-endorsement h3 { margin: 0; color: var(--white); font-size: clamp(1.8rem, 3vw, 2.5rem); letter-spacing: -.01em; }
 .individual-endorsement p { margin: .7rem 0 0; color: #b9c8d9; line-height: 1.55; }
+.individual-endorsements__disclaimer { margin: 2rem 0 0; color: #b9c8d9; font-size: .82rem; font-style: italic; line-height: 1.5; }
 .anchor-target { display: block; scroll-margin-top: 92px; }
 
 .get-involved { background: var(--white); }
@@ -181,7 +182,7 @@ h1, h2, h3 { margin-top: 0; font-family: 'Barlow Condensed', Impact, sans-serif;
 @media (max-width: 520px) {
   html { scroll-padding-top: 76px; }
   .site-header { min-height: 76px; }
-  .campaign-logo img { width: 135px; }
+  .campaign-logo img { height: 66px; max-width: 150px; }
   .site-nav { top: 76px; }
   .hero { min-height: 850px; }
   .hero::before { background: linear-gradient(180deg, rgba(7,26,56,.98) 0%, rgba(7,26,56,.92) 56%, rgba(7,26,56,.55) 100%); }
