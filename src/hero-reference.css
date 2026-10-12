@@ -1,7 +1,7 @@
 /* Hero/reference lockup overrides. Keep these after App.css. */
 .site-header {
   width: 100%;
-  min-height: 92px;
+  min-height: 108px;
   position: absolute;
   top: 0;
   left: 0;
@@ -29,7 +29,7 @@
 
 .campaign-logo img {
   width: auto;
-  height: 90px;
+  height: 108px;
   max-width: 190px;
   border-radius: 6px;
 }
@@ -258,8 +258,8 @@
 }
 
 @media (max-width: 1280px) {
-  .site-header { min-height: 90px; }
-  .campaign-logo img { width: auto; height: 90px; max-width: 190px; }
+  .site-header { min-height: 108px; }
+  .campaign-logo img { width: auto; height: 108px; max-width: 190px; }
   .site-nav { gap: 1rem; }
   .site-nav > a:not(.button) { font-size: .88rem; }
   .site-nav .button--red { min-height: 48px; font-size: 1rem; }
@@ -272,12 +272,12 @@
 @media (max-width: 1120px) {
   .site-header {
     position: absolute;
-    min-height: 90px;
+    min-height: 108px;
     background: rgba(255,255,255,.94);
     backdrop-filter: blur(12px);
   }
   .campaign-logo { background: transparent; box-shadow: none; padding: 0; }
-  .site-nav { top: 90px; }
+  .site-nav { top: 96px; }
   .site-nav > a:not(.button)::after { display: none; }
   .hero { min-height: 860px; height: 860px; }
   .hero__content { width: 58%; padding: 150px 0 45px 2.4rem; }
@@ -307,8 +307,8 @@
 }
 
 @media (max-width: 520px) {
-  .campaign-logo img { width: 150px; height: auto; max-width: 150px; }
-  .site-header { min-height: 90px; padding-inline: 1rem; }
+  .campaign-logo img { width: 160px; height: auto; max-width: 160px; }
+  .site-header { min-height: 96px; padding-inline: 1rem; }
   .site-nav { top: 90px; }
   .hero { min-height: 850px; }
   .hero__campus { object-position: 57% center; }
