@@ -28,7 +28,7 @@ export default function GetInvolvedPage() {
 
   useEffect(() => {
     const handleSubmissionResponse = (event) => {
-      if (event.source !== responseFrameRef.current?.contentWindow) return
+      if (!['https://script.googleusercontent.com', 'https://script.google.com'].includes(event.origin)) return
 
       const result = event.data
       if (!result || result.type !== 'huy-campaign-form-result') return
