@@ -44,9 +44,6 @@ export default function EndorsementsPage() {
               </article>
             ))}
           </div>
-          <p className="individual-endorsements__disclaimer">
-            Titles are for identification purposes only.
-          </p>
         </div>
       </section>
     </main>

@@ -20,7 +20,6 @@ export default function GetInvolvedPage() {
   const [interests, setInterests] = useState(getInitialInterests)
   const [submissionStatus, setSubmissionStatus] = useState('idle')
   const [submissionMessage, setSubmissionMessage] = useState('')
-  const [emailFallbackHref, setEmailFallbackHref] = useState('mailto:votenguyen4lbcc@gmail.com')
   const submissionId = useRef(null)
 
   const handleSubmit = async (event) => {
@@ -29,19 +28,6 @@ export default function GetInvolvedPage() {
 
     const form = event.currentTarget
     const formData = new FormData(form)
-    const emailFields = [
-      ['First Name', formData.get('firstName')],
-      ['Last Name', formData.get('lastName')],
-      ['Email', formData.get('email')],
-      ['Phone', formData.get('phone') || 'Not provided'],
-      ['ZIP Code', formData.get('zipCode') || 'Not provided'],
-      ['Message', formData.get('message') || 'Not provided'],
-      ['Involvement Options', formData.getAll('interests').join(', ') || 'None selected'],
-      ['SMS Consent', formData.get('smsConsent') === 'on' ? 'Yes' : 'No'],
-    ]
-    const emailSubject = `Get Involved Submission - ${formData.get('firstName') || ''} ${formData.get('lastName') || ''}`.trim()
-    const emailBody = emailFields.map(([label, value]) => `${label}: ${value}`).join('\n\n')
-    setEmailFallbackHref(`mailto:votenguyen4lbcc@gmail.com?${new URLSearchParams({ subject: emailSubject, body: emailBody })}`)
     submissionId.current ??= crypto.randomUUID()
     setSubmissionStatus('sending')
     setSubmissionMessage('')
@@ -73,7 +59,7 @@ export default function GetInvolvedPage() {
       setSubmissionMessage('Thank you. Your message has been sent to the campaign.')
     } catch (error) {
       setSubmissionStatus('error')
-      setSubmissionMessage(error instanceof Error ? error.message : 'Your message could not be sent. Please try again.')
+      setSubmissionMessage('We could not send your message. Please email the campaign directly.')
     }
   }
 
@@ -165,7 +151,7 @@ export default function GetInvolvedPage() {
               <p className={`involved-form__status involved-form__status--${submissionStatus}`} role="status" aria-live="polite">
                 {submissionMessage}{' '}
                 {submissionStatus === 'error' && (
-                  <a href={emailFallbackHref}>Email the campaign with your information</a>
+                  <a href="mailto:votenguyen4lbcc@gmail.com">votenguyen4lbcc@gmail.com</a>
                 )}
               </p>
             )}

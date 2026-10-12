@@ -110,7 +110,6 @@ h1, h2, h3 { margin-top: 0; font-family: 'Barlow Condensed', Impact, sans-serif;
 .individual-endorsement { padding: 1.25rem 0 1.5rem; border-top: 2px solid var(--red); }
 .individual-endorsement h3 { margin: 0; color: var(--white); font-size: clamp(1.8rem, 3vw, 2.5rem); letter-spacing: -.01em; }
 .individual-endorsement p { margin: .7rem 0 0; color: #b9c8d9; line-height: 1.55; }
-.individual-endorsements__disclaimer { margin: 2rem 0 0; color: #b9c8d9; font-size: .82rem; font-style: italic; line-height: 1.5; }
 .anchor-target { display: block; scroll-margin-top: 92px; }
 
 .get-involved { background: var(--white); }
