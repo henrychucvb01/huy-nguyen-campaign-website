@@ -40,7 +40,7 @@
 }
 
 @media (max-width: 1280px) {
-  .involved-page { padding-top: 82px; }
+  .involved-page { padding-top: 90px; }
 }
 
 @media (max-width: 560px) {
@@ -53,5 +53,5 @@
 }
 
 @media (max-width: 520px) {
-  .involved-page { padding-top: 76px; }
+  .involved-page { padding-top: 90px; }
 }
