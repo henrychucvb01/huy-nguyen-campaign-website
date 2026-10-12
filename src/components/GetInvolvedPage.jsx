@@ -1,5 +1,7 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import '../get-involved-page.css'
+
+const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPnJUVOmZcpuxiHN58aeKP4N1A8lweUPH3tWtqaJbEgxGsRbkal8gZnXWshynVTCzH/exec'
 
 const involvementOptions = [
   ['volunteer', 'I would like to volunteer'],
@@ -20,47 +22,57 @@ export default function GetInvolvedPage() {
   const [interests, setInterests] = useState(getInitialInterests)
   const [submissionStatus, setSubmissionStatus] = useState('idle')
   const [submissionMessage, setSubmissionMessage] = useState('')
-  const submissionId = useRef(null)
+  const formRef = useRef(null)
+  const responseFrameRef = useRef(null)
+  const timeoutRef = useRef(null)
 
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    if (submissionStatus === 'sending') return
+  useEffect(() => {
+    const handleSubmissionResponse = (event) => {
+      if (event.source !== responseFrameRef.current?.contentWindow) return
 
-    const form = event.currentTarget
-    const formData = new FormData(form)
-    submissionId.current ??= crypto.randomUUID()
+      const result = event.data
+      if (!result || result.type !== 'huy-campaign-form-result') return
+
+      if (timeoutRef.current) {
+        window.clearTimeout(timeoutRef.current)
+        timeoutRef.current = null
+      }
+
+      if (result.ok) {
+        formRef.current?.reset()
+        setInterests({})
+        setSubmissionStatus('success')
+        setSubmissionMessage(
+          'Thank you for your interest in supporting Huy’s campaign! Your information has been received. We appreciate you being part of a stronger future for LBCC.'
+        )
+      } else {
+        setSubmissionStatus('error')
+        setSubmissionMessage(result.message || 'We couldn’t save your information. Please try again.')
+      }
+    }
+
+    window.addEventListener('message', handleSubmissionResponse)
+    return () => {
+      window.removeEventListener('message', handleSubmissionResponse)
+      if (timeoutRef.current) window.clearTimeout(timeoutRef.current)
+    }
+  }, [])
+
+  const handleSubmit = (event) => {
+    if (submissionStatus === 'sending') {
+      event.preventDefault()
+      return
+    }
+
     setSubmissionStatus('sending')
     setSubmissionMessage('')
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          firstName: formData.get('firstName'),
-          lastName: formData.get('lastName'),
-          email: formData.get('email'),
-          phone: formData.get('phone'),
-          zipCode: formData.get('zipCode'),
-          message: formData.get('message'),
-          interests: formData.getAll('interests'),
-          smsConsent: formData.get('smsConsent') === 'on',
-          submissionId: submissionId.current,
-        }),
-      })
-      const result = await response.json().catch(() => ({}))
-
-      if (!response.ok) throw new Error(result.error || 'Your message could not be sent.')
-
-      form.reset()
-      setInterests({})
-      submissionId.current = null
-      setSubmissionStatus('success')
-      setSubmissionMessage('Thank you. Your message has been sent to the campaign.')
-    } catch {
+    if (timeoutRef.current) window.clearTimeout(timeoutRef.current)
+    timeoutRef.current = window.setTimeout(() => {
       setSubmissionStatus('error')
-      setSubmissionMessage('We could not send your message. Please email the campaign directly.')
-    }
+      setSubmissionMessage('We didn’t receive a confirmation. Please check your connection and try again.')
+      timeoutRef.current = null
+    }, 30000)
   }
 
   return (
@@ -75,7 +87,15 @@ export default function GetInvolvedPage() {
             <p>Join neighbors across Long Beach working to build a stronger future for LBCC students, families, and our community.</p>
           </div>
 
-          <form className="involved-form" onSubmit={handleSubmit}>
+          <form
+            ref={formRef}
+            className="involved-form"
+            action={GOOGLE_APPS_SCRIPT_URL}
+            method="POST"
+            target="campaign-sheets-response"
+            acceptCharset="UTF-8"
+            onSubmit={handleSubmit}
+          >
             <div className="involved-form__fields">
               <label>
                 <span>First Name</span>
@@ -148,14 +168,19 @@ export default function GetInvolvedPage() {
               <a href="https://www.votenguyen4lbcc.com/privacy-policy">Privacy Policy</a>.
             </p>
             {submissionMessage && (
-              <p className={`involved-form__status involved-form__status--${submissionStatus}`} role="status" aria-live="polite">
-                {submissionMessage}{' '}
-                {submissionStatus === 'error' && (
-                  <a href="mailto:votenguyen4lbcc@gmail.com">votenguyen4lbcc@gmail.com</a>
-                )}
+              <p className={'involved-form__status involved-form__status--' + submissionStatus} role="status" aria-live="polite">
+                {submissionMessage}
               </p>
             )}
           </form>
+          <iframe
+            ref={responseFrameRef}
+            name="campaign-sheets-response"
+            title="Hidden campaign form submission response"
+            tabIndex="-1"
+            aria-hidden="true"
+            style={{ display: 'none' }}
+          />
         </div>
       </section>
     </main>
