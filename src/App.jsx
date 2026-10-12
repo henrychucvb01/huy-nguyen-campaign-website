@@ -21,7 +21,6 @@ function HomePage() {
       <WhyHuy />
       <ExperienceStrip />
       <Endorsements />
-      <span className="anchor-target" id="news" aria-hidden="true" />
       <GetInvolved />
     </main>
   )
