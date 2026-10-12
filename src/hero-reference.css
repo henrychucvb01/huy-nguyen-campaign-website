@@ -28,10 +28,10 @@
 }
 
 .campaign-logo img {
-  width: clamp(230px, 16vw, 270px);
-  height: auto;
+  width: auto;
+  height: 90px;
+  max-width: 190px;
   border-radius: 6px;
-  max-width: none;
 }
 
 .site-nav {
@@ -259,7 +259,7 @@
 
 @media (max-width: 1280px) {
   .site-header { min-height: 82px; }
-  .campaign-logo img { width: 230px; height: auto; }
+  .campaign-logo img { width: auto; height: 90px; max-width: 190px; }
   .site-nav { gap: 1rem; }
   .site-nav > a:not(.button) { font-size: .88rem; }
   .site-nav .button--red { min-height: 48px; font-size: 1rem; }
@@ -307,7 +307,7 @@
 }
 
 @media (max-width: 520px) {
-  .campaign-logo img { width: 170px; height: auto; }
+  .campaign-logo img { width: 150px; height: auto; max-width: 150px; }
   .site-header { min-height: 76px; padding-inline: 1rem; }
   .site-nav { top: 76px; }
   .hero { min-height: 850px; }
