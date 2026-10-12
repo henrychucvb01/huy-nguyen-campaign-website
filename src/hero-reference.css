@@ -30,6 +30,7 @@
 .campaign-logo img {
   width: clamp(230px, 16vw, 270px);
   height: auto;
+  border-radius: 6px;
   max-width: none;
 }
 
