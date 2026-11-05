@@ -1,8 +1,10 @@
 import './App.css'
 import './hero-reference.css'
+import './post-election.css'
 import AboutPage from './components/AboutPage'
 import Endorsements from './components/Endorsements'
 import EndorsementsPage from './components/EndorsementsPage'
+import ElectionResults from './components/ElectionResults'
 import ExperienceStrip from './components/ExperienceStrip'
 import Footer from './components/Footer'
 import GetInvolved from './components/GetInvolved'
@@ -11,12 +13,15 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import LegalPage from './components/LegalPage'
 import ThreeFs from './components/ThreeFs'
+import ThankYou from './components/ThankYou'
 import WhyHuy from './components/WhyHuy'
 
 function HomePage() {
   return (
     <main>
       <Hero />
+      <ElectionResults />
+      <ThankYou />
       <ThreeFs />
       <WhyHuy />
       <ExperienceStrip />
