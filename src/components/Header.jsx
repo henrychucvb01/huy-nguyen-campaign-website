@@ -3,11 +3,11 @@ import CampaignLogo from './CampaignLogo'
 
 const links = [
   ['About Huy', '/about'],
-  ['3 F’s', '/#three-fs'],
+  ["3 F’s", '/#three-fs'],
   ['Experience', '/#experience'],
   ['Endorsements', '/endorsements'],
-  ['Get Involved', '/get-involved'],
-  ['Contact', '/get-involved'],
+  ['Stay Connected', '/#stay-connected'],
+  ['Contact', '/#contact'],
 ]
 
 export default function Header() {
@@ -33,15 +33,6 @@ export default function Header() {
         {links.map(([label, href]) => (
           <a key={label} href={href} onClick={closeMenu}>{label}</a>
         ))}
-        <a
-          className="button button--red button--small"
-          href="https://www.efundraisingconnections.com/c/HUYNGUYENFORLBCCDTRUSTEEBOARD"
-          target="_blank"
-          rel="noreferrer"
-          onClick={closeMenu}
-        >
-          Donate
-        </a>
       </nav>
     </header>
   )
