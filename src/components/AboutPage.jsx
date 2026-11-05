@@ -1,7 +1,7 @@
 import '../about-page.css'
 
 const photos = {
-  hero: '/images/about/LBCCCandidate-249.jpg',
+  hero: '/images/about/huy-nguyen-about-portrait.png',
   military: '/images/about/military.jpg',
   students: '/images/about/LBCCCandidate-236.jpg',
   lbcc: '/images/about/LBCCCandidate-280.jpg',
