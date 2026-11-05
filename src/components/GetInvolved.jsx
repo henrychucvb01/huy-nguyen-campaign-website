@@ -1,64 +1,48 @@
-const actions = [
+const waysToConnect = [
   {
     number: '01',
-    title: 'Volunteer',
-    text: 'Join neighbors across Long Beach working to move LBCC forward.',
-    link: 'Sign Up to Help',
-    href: '/get-involved?interest=volunteer',
+    title: 'About Huy',
+    text: 'Learn about Huy’s public service and the experiences that shaped his work.',
+    link: 'Meet Huy',
+    href: '/about',
   },
   {
     number: '02',
-    title: 'Endorse',
-    text: 'Add your name and voice to the growing community supporting Huy.',
-    link: 'Endorse Huy',
-    href: '/get-involved?interest=endorse',
+    title: 'Our Vision',
+    text: 'Explore the Faster, Foundation, and Future priorities for LBCC.',
+    link: 'View Our Vision',
+    href: '/#three-fs',
   },
   {
     number: '03',
-    title: 'Donate',
-    text: 'Help us reach voters and build a campaign powered by the community.',
-    link: 'Contribute',
-    href: 'https://www.efundraisingconnections.com/c/HUYNGUYENFORLBCCDTRUSTEEBOARD',
-    external: true,
-    featured: true,
+    title: 'Contact',
+    text: 'Share your questions and ideas for the future of Long Beach City College.',
+    link: 'Contact Huy',
+    href: '/get-involved',
   },
 ]
 
 export default function GetInvolved() {
   return (
-    <section className="section get-involved" id="get-involved">
+    <section className="section get-involved" id="stay-connected">
       <div className="section__inner">
         <div className="get-involved__heading">
-          <p className="eyebrow">Take Action</p>
-          <h2>Be Part of a Stronger Future for LBCC.</h2>
+          <p className="eyebrow">Stay Connected</p>
+          <h2>The Work for LBCC Continues.</h2>
+          <p className="section-heading__intro">
+            Keep up with Huy’s priorities and stay connected to the future of our college and community.
+          </p>
         </div>
         <div className="get-involved__grid">
-          {actions.map((action) => (
-            <article className={`involvement-card${action.featured ? ' involvement-card--featured' : ''}`} key={action.title}>
-              <span className="involvement-card__icon" aria-hidden="true">{action.number}</span>
-           
-              <h3>{action.title}</h3>
-              <p>{action.text}</p>
-              <a
-                href={action.href}
-                target={action.external ? '_blank' : undefined}
-                rel={action.external ? 'noreferrer' : undefined}
-              >
-                {action.link} →
-              </a>
+          {waysToConnect.map((item) => (
+            <article className="involvement-card" key={item.title}>
+              <span className="involvement-card__icon" aria-hidden="true">{item.number}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <a href={item.href}>{item.link} →</a>
             </article>
           ))}
-          
         </div>
-              <p className="get-involved__sms-disclaimer">
-               By providing your phone number, you are consenting to marketing, informational and donation requests, 
-               donations may be solicited TEXTS to that number from Huy Nguyen for LBCCD Trustee 2026 (ID #1484027) or 
-               Long Beach City College Faculty Association (ID #880734). We will provide alerts and other information. 
-               Msg & data rates may apply. Msg frequency will vary. Reply HELP for help, STOP to end.
-               <a href="/terms-and-conditions">Terms &amp; Conditions</a>
-              {' and '}
-              <a href="/privacy-policy">Privacy Policy</a>.
-              </p>
       </div>
     </section>
   )

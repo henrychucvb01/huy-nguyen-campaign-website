@@ -152,7 +152,7 @@
   position: relative;
   isolation: isolate;
   color: #fff;
-  font-size: .69em;
+  font-size: .56em;
   font-style: italic;
   font-weight: 900;
   letter-spacing: -.026em;
@@ -301,7 +301,7 @@
   }
   .hero .eyebrow { font-size: 1.15rem; }
   .hero h1 { font-size: clamp(4rem, 12.7vw, 5.35rem); }
-  .headline-banner { font-size: .61em; }
+  .headline-banner { font-size: .55em; }
   .hero__candidate { height: 89%; right: -6%; bottom: -25%; }
   .hero__actions .button { min-width: 0; }
 }
@@ -319,7 +319,7 @@
   }
   .hero .eyebrow { font-size: 1rem; letter-spacing: .06em; }
   .hero h1 { font-size: clamp(3.55rem, 18vw, 4.75rem); }
-  .headline-banner { margin-left: -.12em; font-size: .49em; }
+  .headline-banner { margin-left: -.12em; font-size: .43em; }
   .hero__divider { width: 100%; gap: 10px; margin-top: .75rem; }
   .hero__divider b { font-size: 1.35rem; }
   .hero__copy { font-size: 1.02rem; }
