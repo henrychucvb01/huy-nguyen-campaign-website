@@ -55,7 +55,7 @@ export const endorsements = [
   },
   {
     name: 'UA Local 250',
-    logo: '/images/endorsements/ua-local-250.png',
+    logo: '/images/endorsements/ua-local-250-logo.png',
     type: 'organization',
   },
   {
