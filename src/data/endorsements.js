@@ -12,11 +12,6 @@ export const endorsements = [
     featured: true,
   },
   {
-    name: 'UA Local 250',
-    logo: '/images/endorsements/ua-local-250.png',
-    type: 'organization',
-  },
-  {
     name: 'Long Beach City College Faculty Association / CTA',
     logo: '/images/endorsements/lbcc-faculty-association-light.png',
     type: 'organization',
@@ -56,6 +51,11 @@ export const endorsements = [
   {
     name: 'Faculty Association of California Community Colleges',
     logo: '/images/endorsements/faccc.png',
+    type: 'organization',
+  },
+  {
+    name: 'UA Local 250',
+    logo: '/images/endorsements/ua-local-250.png',
     type: 'organization',
   },
   {
