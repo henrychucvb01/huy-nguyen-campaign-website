@@ -4,7 +4,7 @@ const thankYouParagraphs = [
   'I am deeply grateful for the trust and encouragement you have shown me.',
   'As we look toward the next chapter, I remain committed to listening, working together, and serving our students and community.',
   'The campaign may be coming to an end, but our journey is just beginning.',
-  'Thank you, Long Beach!',
+  'Thank you, Long Beach and Lakewood!',
 ]
 
 export default function ThankYou() {
