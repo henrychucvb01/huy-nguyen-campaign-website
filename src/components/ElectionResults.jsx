@@ -80,15 +80,6 @@ export default function ElectionResults() {
           +{voteLead.toLocaleString('en-US')} <span>Vote Lead</span>
         </p>
         <p className="election-results__disclaimer">{results.asOf}</p>
-        <div className="election-results__disclaimer">
-          <h3>Acknowledging Susana Gonzalez Edmond</h3>
-          <p>
-            Susana Gonzalez Edmond has conceded the race and wished Henry Nguyen well
-            as he takes on this responsibility. We thank her for her commitment to
-            education and her service to our community. We look forward to working
-            together for the students and families of Long Beach City College.
-          </p>
-        </div>
       </div>
     </section>
   )
