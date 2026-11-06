@@ -14,7 +14,8 @@ export default function Hero() {
         <p className="eyebrow eyebrow--light">LBCC Board of Trustees • Area 5</p>
         <h1>
           <span>Thank You,</span>
-          <span>Long Beach!</span>
+          <span>Long Beach</span>
+          <span>and Lakewood!</span>
           <span className="headline-banner"><span>A New Chapter Begins.</span></span>
         </h1>
 
