@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 
 const results = {
   status: 'Unofficial Results',
-  asOf: 'Unofficial results as of November 5, 2026, 9:21:41 AM PST. Pending certification by the Los Angeles County Registrar-Recorder/County Clerk.',
+  asOf: 'Unofficial results as of November 5, 2026, 4:34:21 PM PST. Pending certification by the Los Angeles County Registrar-Recorder/County Clerk.',
   candidates: [
-    { name: 'Huy “Henry” Nguyen', votes: 16694, percentage: 53.63, winner: true },
-    { name: 'Susana Gonzalez Edmond', votes: 14436, percentage: 46.37, winner: false },
+    { name: 'Huy “Henry” Nguyen', votes: 17587, percentage: 53.52, winner: true },
+    { name: 'Susana Gonzalez Edmond', votes: 15275, percentage: 46.48, winner: false },
   ],
 }
 
@@ -80,6 +80,15 @@ export default function ElectionResults() {
           +{voteLead.toLocaleString('en-US')} <span>Vote Lead</span>
         </p>
         <p className="election-results__disclaimer">{results.asOf}</p>
+        <div className="election-results__disclaimer">
+          <h3>Acknowledging Susana Gonzalez Edmond</h3>
+          <p>
+            Susana Gonzalez Edmond has conceded the race and wished Henry Nguyen well
+            as he takes on this responsibility. We thank her for her commitment to
+            education and her service to our community. We look forward to working
+            together for the students and families of Long Beach City College.
+          </p>
+        </div>
       </div>
     </section>
   )
