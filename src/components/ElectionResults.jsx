@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 
 const results = {
   status: 'Unofficial Results',
-  asOf: 'Unofficial results as of November 7, 2026, 4:38:38 PM PST. Pending certification by the Los Angeles County Registrar-Recorder/County Clerk.',
+  asOf: 'Unofficial results as of November 8, 2026, 4:02:28 PM PST. Pending certification by the Los Angeles County Registrar-Recorder/County Clerk.',
   candidates: [
-    { name: 'Huy “Henry” Nguyen', votes: 20708, percentage: 53.20, winner: true },
-    { name: 'Susana Gonzalez Edmond', votes: 18220, percentage: 46.80, winner: false },
+    { name: 'Huy “Henry” Nguyen', votes: 21083, percentage: 53.13, winner: true },
+    { name: 'Susana Gonzalez Edmond', votes: 18598, percentage: 46.87, winner: false },
   ],
 }
 
